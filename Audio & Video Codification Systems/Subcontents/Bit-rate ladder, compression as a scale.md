@@ -1,0 +1,1 @@
+![[1-Introduction-to-audio-coding.pdf#page=17&rect=50,44,900,448|1-Introduction-to-audio-coding, p.17]]

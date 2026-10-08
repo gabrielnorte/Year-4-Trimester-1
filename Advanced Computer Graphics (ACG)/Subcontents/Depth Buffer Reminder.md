@@ -1,0 +1,2 @@
+![[T2_BasicRayTracing.pdf#page=10&rect=233,42,722,438|T2_BasicRayTracing, p.10]]![[T2_BasicRayTracing.pdf#page=12&rect=265,36,711,417|T2_BasicRayTracing, p.12]]![[T2_BasicRayTracing.pdf#page=14&rect=188,35,757,439|T2_BasicRayTracing, p.14]]
+The order in which the triangles were drawn is **irrelevant**, what matters is that when we place the triangles to draw them, we should know if they're behind or in front of what we already painted

@@ -1,0 +1,1 @@
+![[2-Quantization-and -entropy-coding.pdf#page=13&rect=17,11,708,350|2-Quantization-and -entropy-coding, p.13]]
