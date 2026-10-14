@@ -1,0 +1,1 @@
+![[T3_RayCasting_RRT.pdf#page=13&rect=27,103,786,416|T3_RayCasting_RRT, p.13]]
