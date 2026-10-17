@@ -23,10 +23,11 @@ As cons however:
 - Transients slow response - SEE [[Transient Response]]
 - Low sensitivity
 - Non flat tailored response
+- Not the best frequency response - NOT TAILRED FOR RECORDING
 
 *So, since it can support pressure better, we can scream more into the mic and the audio won't clip, which matches well with the fact that the microphone has a low sensitivity*
 
-# Ribbon microphones
+## Ribbon microphones
 ![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=6&rect=56,137,636,378|AES_T3_Sound_Capturing_and_Microphones_26-27, p.6]]
 ## Ribbon Transduction
 Due to the small and **light** membrane, the sensitivity is improved compare to the previous case
@@ -34,9 +35,16 @@ Due to the small and **light** membrane, the sensitivity is improved compare to 
 ```ad-danger
 Due to the small corrugated ribbon, loud soud can easily break it even without being connecteds
 ```
+# Propagation shapes
+```ad-important
+For different frequencies, the cardiod shape can change
+![[T3 - Sound and Capturing microphones-1792085169277.webp]]
+	SM58
+```
 
+# Electrostatic condenser microphone
 
-## Piezoelectric transduction
+# Piezoelectric transduction
 Used in acoustic guitar pickups, contact microphones or even violin bridges
 They're just a material that generates a voltage when flexed or deformed
 
@@ -46,5 +54,19 @@ Different microphones provide different frequency responses, which means that, t
 2. Microphone sensitivity
 ```
 
+
+# Absorbption, reflection, refraction and diffraction
+For diffraction, some microphones count with a structure that doesn't let specific frequencies past
+
+# Spatial treatments
+## Room modes
+Depending on the room size and dimensions, reflections are prone to occur in many different manners. That means, **we can find an infinite amount of frequencies whose wavelength match the dimensions of the room** - STATIONARY WAVELENGTH
+- High pressure close to the walls
+
+## Acoustic materials
+- Perforated panels
+- Helmholtz resonators
+- Absorbers
+- 
 
 # Phantom power
