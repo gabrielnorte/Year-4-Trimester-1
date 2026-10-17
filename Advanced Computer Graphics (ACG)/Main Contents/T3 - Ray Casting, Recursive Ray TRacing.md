@@ -75,7 +75,7 @@ Considering **phong** illumination, **we differentiate different reflections**
 ```
 
 ### Diffuse reflection
-Incident light gets equally scattered in all possible directions, therefore, no matter the viewing direction, the radiated light will be same on all directions.
+Incident light gets equally scattered in all possible directions, therefore, no matter the viewing direction, the radiated (**RADIATION != IRRADIATION**) light will be same on all directions.
 **Still, the intensity will be different**
 $$L_{o}^{d} = E_{i}(p)(w_{i}·N)k_{d}$$
 The use $w_{i}$ accounts for the shadow
