@@ -23,6 +23,15 @@ Doubling acoustic power: Multiplies $I$ by 2, soud pressure by $1.41$ = + 3dB
 
 See [[Spherical vs Cylindrical Radiation]]
 
+# SPL vs SIL
+**S**ound **P**ressure **L**evel indicates how lound a sound is in terms of **air pressure**. When using dBs, it is based on the minimum hearing level of 20 micropascals (SPL unit)
+**S**ound **I**ntensity **L**evel it's a logarithmic measure of sound intensity *in decibels*, computed through
+$$SIL (dB)= 10\log_{10}\left( \frac{I}{I_{0}} \right)$$
+Where $I_{0}$ is $10^{-12}$, as the threshold of human hearing
+
+```ad-danger
+Note that log use in SIL. IT DOESN'T USE $20\log_{10}$, that corresponds to the conversion between volts and dB, this is different
+```
 ## Sound field definitions
 ![[AES_T1_Sound_and_Acoustics_26-27.pdf#page=8&rect=29,14,684,453|AES_T1_Sound_and_Acoustics_26-27, p.8]]
 The reason why pas the diffuse part is constant is because we assume that the room is closed, and even if we get far, we're still inside the room
@@ -30,8 +39,13 @@ The reason why pas the diffuse part is constant is because we assume that the ro
 ## [Equal loudness test](https://www.phys.unsw.edu.au/jw/hearing.html)
 How some frequencies, at the same volume, can be heard more or less than others. It follows the following curve
 ![[AES_T1_Sound_and_Acoustics_26-27.pdf#page=9&rect=24,47,441,282|AES_T1_Sound_and_Acoustics_26-27, p.9]]
-![[AES_T0_Basic_Concepts_26-27.pdf#page=6&rect=16,14,710,520|AES_T0_Basic_Concepts_26-27, p.6]]
 
+# Weighted Levels
+![[AES_T0_Basic_Concepts_26-27.pdf#page=6&rect=16,14,710,520|AES_T0_Basic_Concepts_26-27, p.6]]
+- dBA correspond to sound measures that imitate the human hear
+- dBB as the midpoint between A and C
+- dBC has a flatter response and includes more low frequencies
+- dBZ doesn't apply any filter
 
 # Masking
 ![[AES_T1_Sound_and_Acoustics_26-27.pdf#page=11&rect=28,197,678,452|AES_T1_Sound_and_Acoustics_26-27, p.11]]
@@ -65,3 +79,9 @@ THIS IS THE SAME AS A FLANGER, IT DELAYS THE SIGNAL IN A SWEEPING WAY TO OBTAIN 
 **Hass effect**: Threshold of eco, signals delayed by >50ms create echo effect
 **Franssen effect**
 **Cocktail effect**: Spatial and spectral filtering allow intelligibility in noisy environments
+
+# Adding Levels
+![[AES_T0_Basic_Concepts_26-27.pdf#page=8&rect=26,21,706,437|AES_T0_Basic_Concepts_26-27, p.8]]
+The reason why simple addition doesn't work for coherent sources is due to the **log scale**
+- Doubling will result  
+## [QUIZ](https://docs.google.com/forms/d/e/1FAIpQLSciYVTAJnJEQrUc__rKA5IxUJ14__S9i5IvTATJSciTMJcFgw/viewform)

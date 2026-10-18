@@ -1,0 +1,2 @@
+![[AES T2 - Basic Electronics.pdf#page=13&rect=68,48,644,431|AES T2 - Basic Electronics, p.13]]
+- Electromagnetic induction works by the same principle as the one shown above, where energy flows **outside the cable**
