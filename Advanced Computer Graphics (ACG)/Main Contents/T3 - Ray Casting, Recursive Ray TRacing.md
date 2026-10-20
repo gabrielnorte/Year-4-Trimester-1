@@ -53,6 +53,9 @@ $$E_{i}(p) = \frac{I_{L}}{d^2}, \text{where } ||p_{L}-p||$$
 Following this law, it is useful to consider the **perfect specular reflection as $w_{R}$**
 ![[T3_RayCasting_RRT.pdf#page=20&rect=27,76,876,535|T3_RayCasting_RRT, p.20]]
 All of this calculations can be visually carried out (vector operations)
+```ad-info
+The operation $w_i·N$ is just the "projection" of $w_i$ onto the vector N, which multiplied by 2 and by N rsults in a. Subtracting $w_i$ results in $w_r$
+```
 
 ```ad-caution
 This might appear in the exam

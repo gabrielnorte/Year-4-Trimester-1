@@ -28,52 +28,14 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Audio Systems/TheoryContents/AES T2 - Basic Electronics.pdf",
-                "page": 31,
+                "file": "Audio Systems/TheoryContents/AES_T1_Sound_and_Acoustics_26-27.pdf",
+                "page": 16,
                 "left": -13,
-                "top": 221,
+                "top": 425,
                 "zoom": 1.2197916666666666
               },
               "icon": "lucide-file-text",
-              "title": "AES T2 - Basic Electronics"
-            }
-          },
-          {
-            "id": "abe389d935b7a927",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Audio Systems/Seminars/Seminar 1 T1.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Seminar 1 T1"
-            }
-          },
-          {
-            "id": "7ade12fc5d9b64e4",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Audio Systems/Seminars/Deliverables/Seminar 1 Deliverable.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Seminar 1 Deliverable"
-            }
-          },
-          {
-            "id": "bf078c5d3859c088",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Audio Systems/Main Contents/T1 - Sound & Acoustics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "T1 - Sound & Acoustics"
+              "title": "AES_T1_Sound_and_Acoustics_26-27"
             }
           },
           {
@@ -82,16 +44,42 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Audio Systems/Main Contents/T2 - Basic Electronics.md",
+                "file": "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "T2 - Basic Electronics"
+              "title": "Full transmitted ray proof"
+            }
+          },
+          {
+            "id": "27cbd158893148a4",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Excalidraw Notes/T3 - Bounding Boxes, RayCasting.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "T3 - Bounding Boxes, RayCasting"
+            }
+          },
+          {
+            "id": "534d1b5b9bd9b947",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Full transmitted ray proof"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "872383af69fbb505",
@@ -124,7 +112,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Audio Systems/Seminars/Deliverables/Seminar 1 Deliverable.md",
+                    "file": "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
@@ -294,18 +282,31 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "7ade12fc5d9b64e4",
+  "active": "534d1b5b9bd9b947",
   "lastOpenFiles": [
+    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T3 - Bounding Boxes, RayCasting.md",
+    "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T3 - Ray Casting, Recursive Ray TRacing.md",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T3_RayCasting_RRT.pdf",
+    "Audio Systems/TheoryContents/AES_T1_Sound_and_Acoustics_26-27.pdf",
+    "Pasted image 20261020123346.png",
     "Audio Systems/Main Contents/T1 - Sound & Acoustics.md",
+    "Audio Systems/TheoryContents/AES_T0_Basic_Concepts_26-27.pdf",
     "Audio Systems/Seminars/Deliverables/Seminar 1 Deliverable.md",
-    "Pasted image 20261018193442.png",
-    "Audio Systems/Subcontents/Spherical vs Cylindrical Radiation.md",
+    "Audio Systems/Media/Pasted image 20261020113940.png",
+    "Audio Systems/Media/T1 - Sound & Acoustics-1792488564404.webp",
+    "Audio Systems/TheoryContents/AES T2 - Basic Electronics.pdf",
+    "Audio Systems/Main Contents/T0.md",
     "Audio Systems/Main Contents/T2 - Basic Electronics.md",
     "Audio Systems/Seminars/Seminar 1 T1.md",
-    "Audio Systems/TheoryContents/AES_T0_Basic_Concepts_26-27.pdf",
-    "Audio Systems/TheoryContents/AES T2 - Basic Electronics.pdf",
+    "Audio Systems/Subcontents/Special Applications.md",
+    "Audio Systems/Media/Pasted image 20261018193442.png",
+    "Audio Systems/Media/Pasted image 20261018175952.png",
+    "Audio Systems/Media/Pasted image 20261018175933.png",
+    "Audio & Video Codification Systems/Main Contents/5. Audio Coding Standards.md",
+    "Pasted image 20261018193442.png",
+    "Audio Systems/Subcontents/Spherical vs Cylindrical Radiation.md",
     "Audio Systems/Seminars/AES T1-Seminar1_26-27.pdf",
-    "Audio Systems/Main Contents/T0.md",
     "Audio Systems/Media/Pasted image 20261017195820.png",
     "Pasted image 20261018175952.png",
     "Pasted image 20261018175933.png",
@@ -314,12 +315,6 @@
     "Audio Systems/Seminars/Deliverables/Seminar 2 Deliverable.md",
     "Excalidraw",
     "Audio Systems/Seminars/AES T2 Seminar 1 - Basic Electronics.pdf",
-    "Audio Systems/Media/Pasted image 20261017203427.png",
-    "Audio Systems/Media/Pasted image 20261017203411.png",
-    "Audio Systems/Media/Pasted image 20261017202841.png",
-    "Audio Systems/Media/Pasted image 20261017201655.png",
-    "Audio Systems/Media/Pasted image 20261017201546.png",
-    "Audio Systems/Media/Pasted image 20261017200827.png",
     "Audio Systems/Media/Unconfirmed 182523.crdownload",
     "Audio Systems/Subcontents/Electric Current vs Electro Magnetic Potential.md",
     "Audio Systems/TheoryContents/Unconfirmed 316486.crdownload",
@@ -333,8 +328,6 @@
     "Advanced Computer Graphics (ACG)/Labs/Lab 2.md",
     "Audio Systems/Labs/Lab 1.md",
     "Untitled.md",
-    "Advanced Computer Graphics (ACG)/Main Contents/T3 - Ray Casting, Recursive Ray TRacing.md",
-    "Advanced Computer Graphics (ACG)/Labs/Lab 1.md",
-    "Advanced Computer Graphics (ACG)/Labs"
+    "Advanced Computer Graphics (ACG)/Labs/Lab 1.md"
   ]
 }

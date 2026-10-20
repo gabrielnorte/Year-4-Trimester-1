@@ -32,6 +32,21 @@ Where $I_{0}$ is $10^{-12}$, as the threshold of human hearing
 ```ad-danger
 Note that log use in SIL. IT DOESN'T USE $20\log_{10}$, that corresponds to the conversion between volts and dB, this is different
 ```
+
+# dB types clarification
+dB's a relative measure that depends on the original unit that was transformed in db.
+- $dBV$: From volts to decibels $\to dBV = 20\log_{10}(V)$
+	- Voltage needs squaring, leading to $10\log_{10}(V)^2$
+- $dBW$: From watts to decibels $\to dBW = 10\log_{10}(W)$
+- $dBu$: Similar to $dBV$ but the reference is  $7.75 Vrms$ instead of $1V$ $\to dBu = 20\log_{10}\left( \frac{V_{rms}}{0.775} \right)$
+
+```ad-caution
+$V_{rms} = 0.707·V = \frac{V}{\sqrt{2}}$
+SO  0.707 IS USED FOR THE CONVERSION WHILE 7.75 IS USED AS PART OF THE SCALING FACTOR IN LOG
+```
+
+![[T1 - Sound & Acoustics-1792488564404.webp]]
+![[AES_T0_Basic_Concepts_26-27.pdf#page=7&rect=417,64,701,478|AES_T0_Basic_Concepts_26-27, p.7|350]]
 ## Sound field definitions
 ![[AES_T1_Sound_and_Acoustics_26-27.pdf#page=8&rect=29,14,684,453|AES_T1_Sound_and_Acoustics_26-27, p.8]]
 The reason why pas the diffuse part is constant is because we assume that the room is closed, and even if we get far, we're still inside the room
