@@ -54,19 +54,35 @@ Different microphones provide different frequency responses, which means that, t
 2. Microphone sensitivity
 ```
 
+# Distance and directivity factors
+![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=18&rect=80,88,651,460|AES_T3_Sound_Capturing_and_Microphones_26-27, p.18]]
 
-# Absorbption, reflection, refraction and diffraction
-For diffraction, some microphones count with a structure that doesn't let specific frequencies past
+# Dual diaphragm microphones
+Using microphones with two different capsules, we can mix their cardiods and add them up
+![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=21&rect=48,30,707,401|AES_T3_Sound_Capturing_and_Microphones_26-27, p.21]]
 
-# Spatial treatments
-## Room modes
-Depending on the room size and dimensions, reflections are prone to occur in many different manners. That means, **we can find an infinite amount of frequencies whose wavelength match the dimensions of the room** - STATIONARY WAVELENGTH
-- High pressure close to the walls
+See [[Special Applications]]
 
-## Acoustic materials
-- Perforated panels
-- Helmholtz resonators
-- Absorbers
-- 
+# Multichannel capturing
+Using multiple microphones (or different capsules inside one microphone) going to one same input
+
+# Proximity effect
+
+
+
+
+```ad-important
+Lab: Smaller echo delay for impulsive sound
+```
+
+# Inverse Square law and Relative Humidity
+![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=33&rect=171,123,553,452|AES_T3_Sound_Capturing_and_Microphones_26-27, p.33]]
+The more humid the air
+
 
 # Phantom power
+Only for condenser microphones
+
+**Unbalanced / Assymetric connection**, phantom power needs a balanced connection
+
+*It's necessary to avoid external power getting through and affecting the PA power*

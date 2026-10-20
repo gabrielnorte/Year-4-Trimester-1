@@ -84,4 +84,18 @@ THIS IS THE SAME AS A FLANGER, IT DELAYS THE SIGNAL IN A SWEEPING WAY TO OBTAIN 
 ![[AES_T0_Basic_Concepts_26-27.pdf#page=8&rect=26,21,706,437|AES_T0_Basic_Concepts_26-27, p.8]]
 The reason why simple addition doesn't work for coherent sources is due to the **log scale**
 - Doubling will result  
+# Absorbption, reflection, refraction and diffraction
+For diffraction, some microphones count with a structure that doesn't let specific frequencies past
+
+# Spatial treatments
+## Room modes
+Depending on the room size and dimensions, reflections are prone to occur in many different manners. That means, **we can find an infinite amount of frequencies whose wavelength match the dimensions of the room** - STATIONARY WAVELENGTH
+- High pressure close to the walls
+
+## Acoustic materials
+- Perforated panels
+- Helmholtz resonators
+- Absorbers
+- 
+
 ## [QUIZ](https://docs.google.com/forms/d/e/1FAIpQLSciYVTAJnJEQrUc__rKA5IxUJ14__S9i5IvTATJSciTMJcFgw/viewform)
