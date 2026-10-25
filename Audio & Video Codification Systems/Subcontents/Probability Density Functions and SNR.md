@@ -1,7 +1,7 @@
 ![[2-Quantization-and -entropy-coding.pdf#page=7&rect=24,65,682,307|2-Quantization-and -entropy-coding, p.7]]
 With PDF's, we can of course obtain
 $$\mu = E[X] = \int xp(x)dx$$
-$$\sigma^2_{X}\int_{-\infty}^\infty(x-\mu_{X})^2p(x)dx=E[(X-\mu_{X})^2]$$
+$$\sigma^2_{X} = \int_{-\infty}^\infty(x-\mu_{X})^2p(x)dx=E[(X-\mu_{X})^2]$$
 The X axis contains the frequency
 
 
@@ -15,5 +15,5 @@ Whenever we use frequency domain we can differentiate between different bits for
 ```
 
 ![[2-Quantization-and -entropy-coding.pdf#page=9&rect=21,25,692,337|2-Quantization-and -entropy-coding, p.9]]
-	Noise won't be heard as long as it lies below the masking threshold
+	Noise won't be heard as long as it lies below the masking threshold (when NMR is small)
 ![[2-Quantization-and -entropy-coding.pdf#page=10&rect=13,8,690,262|2-Quantization-and -entropy-coding, p.10]]

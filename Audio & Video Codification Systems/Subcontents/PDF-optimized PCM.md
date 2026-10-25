@@ -1,1 +1,3 @@
 ![[2-Quantization-and -entropy-coding.pdf#page=13&rect=17,11,708,350|2-Quantization-and -entropy-coding, p.13]]
+- Ranges of amplitude values with high probability thus need a high bit depth, since with how often they'll be heard, we should at least make sure that they sound good
+- This is why the middle region is divided in a smaller range, as they appear more than other amplitudes and should have a dedicated high bit depth
