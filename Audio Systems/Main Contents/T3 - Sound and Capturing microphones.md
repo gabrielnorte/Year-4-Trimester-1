@@ -68,6 +68,7 @@ Using multiple microphones (or different capsules inside one microphone) going t
 
 # Proximity effect
 
+# Characterizing freq. response with microphone types
 
 
 
@@ -86,3 +87,9 @@ Only for condenser microphones
 **Unbalanced / Assymetric connection**, phantom power needs a balanced connection
 
 *It's necessary to avoid external power getting through and affecting the PA power*
+
+
+# Sensitivity measures
+- Always done with 1 Pascal of pressure
+- 1 m away
+- At 1000 Hz

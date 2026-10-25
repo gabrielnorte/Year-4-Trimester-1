@@ -23,26 +23,38 @@ Doubling acoustic power: Multiplies $I$ by 2, soud pressure by $1.41$ = + 3dB
 
 See [[Spherical vs Cylindrical Radiation]]
 
-# SPL vs SIL
+# dB types clarification
+## SPL vs SIL
 **S**ound **P**ressure **L**evel indicates how lound a sound is in terms of **air pressure**. When using dBs, it is based on the minimum hearing level of 20 micropascals (SPL unit)
+- Based on pressure reference point (20 $\mu P$)
 **S**ound **I**ntensity **L**evel it's a logarithmic measure of sound intensity *in decibels*, computed through
+- Based on intensity reference point ($10^{-12} W$)
 $$SIL (dB)= 10\log_{10}\left( \frac{I}{I_{0}} \right)$$
-Where $I_{0}$ is $10^{-12}$, as the threshold of human hearing
+Where $I_{0}$ is $10^{-12} W$, as the threshold of human hearing
 
 ```ad-danger
 Note that log use in SIL. IT DOESN'T USE $20\log_{10}$, that corresponds to the conversion between volts and dB, this is different
 ```
-
-# dB types clarification
+```ad-info
+$dB$ always correspond to a ratio, be it pressure or sound intensity. What changes is the log scale, if it squared or not, and the units it corresponds to
+```
+## dBx types
 dB's a relative measure that depends on the original unit that was transformed in db.
 - $dBV$: From volts to decibels $\to dBV = 20\log_{10}(V)$
 	- Voltage needs squaring, leading to $10\log_{10}(V)^2$
 - $dBW$: From watts to decibels $\to dBW = 10\log_{10}(W)$
 - $dBu$: Similar to $dBV$ but the reference is  $7.75 Vrms$ instead of $1V$ $\to dBu = 20\log_{10}\left( \frac{V_{rms}}{0.775} \right)$
+- $dBFS$: Digital measure, with maximum value $0 dBFS$ before it clips
+	- Exclusively used digitally, and depending on the model. 0dBFS can mean different things
+		- In SMPTE, it's 24 dB
 
 ```ad-caution
 $V_{rms} = 0.707·V = \frac{V}{\sqrt{2}}$
 SO  0.707 IS USED FOR THE CONVERSION WHILE 7.75 IS USED AS PART OF THE SCALING FACTOR IN LOG
+```
+
+```ad-important
+On a fader, the dB gain or reduction can simply be added or reduced on any dBx unit, as they all share voltage units
 ```
 
 ![[T1 - Sound & Acoustics-1792488564404.webp]]
@@ -95,6 +107,12 @@ THIS IS THE SAME AS A FLANGER, IT DELAYS THE SIGNAL IN A SWEEPING WAY TO OBTAIN 
 **Franssen effect**
 **Cocktail effect**: Spatial and spectral filtering allow intelligibility in noisy environments
 
+```ad-tldr
+title: Why echo happens past a threshold
+Even though delaying the signal just a bit can be considered echo, some of these echoes will still cancel some frequencies, leading to comb filtering rather than the Hass effect.
+With a delay of $50 ms = 0.05 s$ (which would be cancelling all frequencies with double the frequency $f = \frac{1}{0.05} = 20 Hz$, that is, $40 Hz$), which is already unhearable. Thus, past this delay, all the frequencies that get cancelled will be below 40 Hz, so instead of a cancellation, comb filtering effect, we would get a Hass effect
+```
+
 # Adding Levels
 ![[AES_T0_Basic_Concepts_26-27.pdf#page=8&rect=26,21,706,437|AES_T0_Basic_Concepts_26-27, p.8]]
 The reason why simple addition doesn't work for coherent sources is due to the **log scale**
@@ -111,6 +129,6 @@ Depending on the room size and dimensions, reflections are prone to occur in man
 - Perforated panels
 - Helmholtz resonators
 - Absorbers
-- 
+
 
 ## [QUIZ](https://docs.google.com/forms/d/e/1FAIpQLSciYVTAJnJEQrUc__rKA5IxUJ14__S9i5IvTATJSciTMJcFgw/viewform)
