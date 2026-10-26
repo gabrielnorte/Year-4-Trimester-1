@@ -84,12 +84,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Audio & Video Codification Systems/Main Contents/2. Quantization and Entropy Coding.md",
+                "file": "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Quantization and Entropy Coding"
+              "title": "3. Time Frequency Representations"
+            }
+          },
+          {
+            "id": "573f8df0f21d1822",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Audio & Video Codification Systems/ExcalidrawNotes/3. Time Frequency Representations.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "3. Time Frequency Representations"
+            }
+          },
+          {
+            "id": "83c2c77a1e0aaa36",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
+                "page": 22,
+                "left": -16,
+                "top": 204,
+                "zoom": 0.9150725181295325
+              },
+              "icon": "lucide-file-text",
+              "title": "3-Time-frequency-analysis-filter-banks-and-transforms"
             }
           },
           {
@@ -115,10 +143,8 @@
               "type": "pdf",
               "state": {
                 "file": "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/1-Introduction-to-audio-coding.pdf",
-                "page": 11,
-                "left": -16,
-                "top": 183,
-                "zoom": 0.9150725181295325
+                "page": 1,
+                "zoom": 1
               },
               "icon": "lucide-file-text",
               "title": "1-Introduction-to-audio-coding"
@@ -158,7 +184,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Audio & Video Codification Systems/Main Contents/2. Quantization and Entropy Coding.md",
+                    "file": "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
@@ -330,8 +356,17 @@
   },
   "active": "978e15d713248cb3",
   "lastOpenFiles": [
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/2-Quantization-and -entropy-coding.pdf",
+    "Audio & Video Codification Systems/ExcalidrawNotes/3. Time Frequency Representations.md",
+    "Audio & Video Codification Systems/Media/Pasted image 20261026124645.png",
+    "Audio & Video Codification Systems/Media/Pasted image 20261026123845.png",
+    "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
+    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
+    "Audio & Video Codification Systems/Subcontents/Samples and filter banks visualization.md",
+    "Audio & Video Codification Systems/Media/Pasted image 20261026113402.png",
+    "Audio & Video Codification Systems/ExcalidrawNotes/Quantization.md",
+    "Audio & Video Codification Systems/ExcalidrawNotes/2. Quantization.md",
     "Audio & Video Codification Systems/Main Contents/2. Quantization and Entropy Coding.md",
+    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/2-Quantization-and -entropy-coding.pdf",
     "Audio & Video Codification Systems/Subcontents/PDF-optimized PCM.md",
     "Audio & Video Codification Systems/Main Contents/1. Introduction to Audio Coding.md",
     "Audio & Video Codification Systems/Subcontents/Probability Density Functions and SNR.md",
@@ -340,16 +375,14 @@
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/4-Psychoacoustic-principles.pdf",
     "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md",
     "Audio & Video Codification Systems/Subcontents/Bit-rate ladder, compression as a scale.md",
-    "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
     "Audio & Video Codification Systems/Main Contents/5. Audio Coding Standards.md",
     "Audio & Video Codification Systems/Subcontents/Uses of lossless compression.md",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/5-Audio-coding-standards.pdf",
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/6-Neural-audio-compression.pdf",
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures",
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/Nueva carpeta",
     "Advanced Computer Graphics (ACG)/Theory Contents/T5_PathTracing.pdf",
-    "Pasted image 20261020123346.png",
+    "Audio & Video Codification Systems/Media/Pasted image 20261020123346.png",
     "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
     "Advanced Computer Graphics (ACG)/Main Contents/T3 - Ray Casting, Recursive Ray TRacing.md",
     "Advanced Computer Graphics (ACG)/Theory Contents/T3_RayCasting_RRT.pdf",
@@ -366,14 +399,7 @@
     "Audio Systems/Media/Pasted image 20261018175933.png",
     "Pasted image 20261018193442.png",
     "Audio Systems/Subcontents/Spherical vs Cylindrical Radiation.md",
-    "Audio Systems/Media/Pasted image 20261017195820.png",
-    "Pasted image 20261018175952.png",
-    "Pasted image 20261018175933.png",
     "Audio Systems/Seminars/Seminar 1 T2.md",
-    "Audio Systems/Seminars/Deliverables/Seminar 2 Deliverable.md",
-    "Audio Systems/Subcontents/Electric Current vs Electro Magnetic Potential.md",
-    "Audio Systems/Labs/Lab2.md",
-    "Audio Systems/Main Contents/T3 - Sound and Capturing microphones.md",
-    "Advanced Computer Graphics (ACG)/Main Contents/T2 - Basic Raytracing.md"
+    "Audio Systems/Seminars/Deliverables/Seminar 2 Deliverable.md"
   ]
 }
