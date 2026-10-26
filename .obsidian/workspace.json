@@ -84,12 +84,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
+                "file": "Advanced Computer Graphics (ACG)/Labs/Lab 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Time Frequency Representations"
+              "title": "Lab 2"
             }
           },
           {
@@ -184,7 +184,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
+                    "file": "Advanced Computer Graphics (ACG)/Labs/Lab 2.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
@@ -356,10 +356,11 @@
   },
   "active": "978e15d713248cb3",
   "lastOpenFiles": [
+    "Advanced Computer Graphics (ACG)/Main Contents/T5 - Indirect Illumination and Path Tracing.md",
+    "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
     "Audio & Video Codification Systems/ExcalidrawNotes/3. Time Frequency Representations.md",
     "Audio & Video Codification Systems/Media/Pasted image 20261026124645.png",
     "Audio & Video Codification Systems/Media/Pasted image 20261026123845.png",
-    "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
     "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
     "Audio & Video Codification Systems/Subcontents/Samples and filter banks visualization.md",
     "Audio & Video Codification Systems/Media/Pasted image 20261026113402.png",
