@@ -42,7 +42,8 @@ For different frequencies, the cardiod shape can change
 	SM58
 ```
 
-# Electrostatic condenser microphone
+# Electrostatic Microphones
+## Condenser microphones
 
 # Piezoelectric transduction
 Used in acoustic guitar pickups, contact microphones or even violin bridges
@@ -93,3 +94,5 @@ Only for condenser microphones
 - Always done with 1 Pascal of pressure
 - 1 m away
 - At 1000 Hz
+
+See comparisons and such on [[T3.5 - Electro Acoustic Analogies]]
