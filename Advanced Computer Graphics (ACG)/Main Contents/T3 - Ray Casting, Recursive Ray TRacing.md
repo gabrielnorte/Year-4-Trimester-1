@@ -49,6 +49,10 @@ They're characterized by a 3D position $p_{L}$ and an intensity 𝑰 (RGB)
 We then denote **direct irradiance $E_{i}(p)$** at a shading point $p$ due to a light source $L$ with position $p_{L}$
 - LIGHT'S INTENSITY DECREASES QUADRATICALLY
 $$E_{i}(p) = \frac{I_{L}}{d^2}, \text{where } ||p_{L}-p||$$
+```ad-note
+In the lab, light falloff due to distance is implied
+```
+
 # Law of reflection
 Following this law, it is useful to consider the **perfect specular reflection as $w_{R}$**
 ![[T3_RayCasting_RRT.pdf#page=20&rect=27,76,876,535|T3_RayCasting_RRT, p.20]]
@@ -77,7 +81,7 @@ Considering **phong** illumination, **we differentiate different reflections**
 (Specular reflection is often denoted as glossy, since specular relates to perfect specular reflections)
 ```
 
-### Diffuse reflection
+### Diffuse reflection (just color)
 Incident light gets equally scattered in all possible directions, therefore, no matter the viewing direction, the radiated (**RADIATION != IRRADIATION**) light will be same on all directions.
 **Still, the intensity will be different**
 $$L_{o}^{d} = E_{i}(p)(w_{i}·N)k_{d}$$
@@ -85,7 +89,7 @@ The use $w_{i}$ accounts for the shadow
 
 ### Glossy (Specular) reflection
 Note that the equation is the same, but it includes a **specular color** $k_{s}$ with the dot product between the perfect reflection direction and the viewpoint. This dot product makes it so that the closer the viewer is to the perfect reflection, the bigger the dot product, thus the bigger the reflection.
-
+$$L_{o}^{s} = E_{i}(p)k_{s}(w_{r}·w_{o})^s$$
 How far the viewer must turn to stop seeing the glossy term is then determined by the *shininess coefficient* $s$ (size of the lobe).
 - Being a dot product, viewing it perpendicurarly will have no reflection
 
@@ -104,10 +108,9 @@ Ambient light is not multiplied by this function since it is not affected by pre
 Dot products are only done between vectors, RGB's are multiplied element wise
 ```
 
-
 ### Applied to phong reflection model (simplification)
 We will denote the reflection function as
-$$\color{SKYBLUE}f_{r}(w_{i}, w_{o}) = k_{d}+k_{s}(w_{r}·w_{o})^s$$
+$$\boxed{\color{SKYBLUE}f_{r}(w_{i}, w_{o}) = k_{d}+k_{s}(w_{r}·w_{o})^s}$$
 Which is part of $L_{o}(w_{o})$, leading to:
 $$L_{o}(w_{o}) = V(p, P_{L})E_{i}(p)(w_{i}·N){\color{SKYBLUE}f_{r}(w_{i}, w_{o})}+k_{a}I_{a}$$
 For multiple light sources then:

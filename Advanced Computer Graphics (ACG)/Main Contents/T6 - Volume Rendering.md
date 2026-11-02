@@ -95,6 +95,102 @@ $$\boxed{\frac{dL}{dt}(t) = -\mu_{t}(t)L(t)+\mu_{s}(t)L_{s}(t)+\mu_{a}(t)L_{e}(t
 # From the RTE to the Volume Rendering equation
 
 
+---
+# Absortion-Only model Set up
+![[T6_RTE_VRE_AbsorptionOnly.pdf#page=44&rect=54,73,843,377|T6_RTE_VRE_AbsorptionOnly, p.44]]
+Now, if we use the chain rule and set $f(t) = \ln(t)$ and $g(t) = L(t)$
+$$\frac{d}{dt}\ln L(t) = \frac{1}{L(t)} \frac{dL}{dt}(t)$$
+Continuing to isolate $L(t)$ (check proof on notebook) results in
+$$L(t) = Be^{-\int_{0}^t\mu_{a}(t')dt'}$$
+Which makes sense, as the light $B$ that goes in, gets altered by $\mu_{a}$ at time $t$
+- The integral is known as the **optical thickness $\tau$**
+- The whole exponent term is called **Transmittance $T$**
+
+With this, the equation can be simplified to
+$$L(t) = Be^{-\tau(0,t)}$$
+$$L(t) =BT$$
+- $T(t_{a}, t_{b}) = e^{-\tau(t_{a}, t_{b})}$ - *Beer-Lambert law*
+
+## Approximation
+As to estimate this equation, we can either go with ray marching or montecarlo integration
+
+
+---
+```ad-info
+A medium / volume is **homogeneous** when its coefficients are constant
+- $\mu_a(t) = \bar{\mu}_a$
+- The self emitted light is also consatnt ($L_e(t) = \bar{L}_e$)
+  
+In **heterogeneous** media, these coefficients change
+```
+
+Thus, when the medium is homogeneous, it can be proven that
+$$L(t) = Be^ {-\tau(0,t)} = Be^{-\tau \bar{\mu}_{a}}$$
+However, on heterogeneous cases:
+- $\tau$ is actually the integral of $\mu_a$, thus, it's just the sum of the area under it
+- It can be simplified to a simple sum with **Riemann sum**
+$$\tau(t_{a}, t_{b}) \approx \sum_{i=0}^{N-1}\mu_{a}(t_{i})\Delta t$$
+With $\Delta t$ being the time jump, the accuracy of the result improves when this jump is small
+
+This process is computed using **Ray Marching**
+- March along the ray, and sample the $\mu_{a}$ at each step
+- At each position $t_{i}$, sample $\mu_{a}$
+
+# Ray marching
+Ray marching comes with some assumptions
+![[T6_RTE_VRE_AbsorptionOnly.pdf#page=55&rect=44,31,955,522|T6_RTE_VRE_AbsorptionOnly, p.55]]
+
+```ad-info
+Due to the raymarching process being a sum, the ray marching process can be done from the front to the back or the back to the front
+- Front (closer to viewer)
+- Back (further from viewer)
+```
+
+```c++
+// Ray setup
+Ray r;
+r.shoot()
+start_point = r.intersection()
+
+
+
+// Ray marching algorithm
+step = 1/10;
+tau = 0.0;
+
+for (i = start_point; i < start_point+1; i+step)) {
+	mu_a = get_mu(i*back)*(step*back)
+	tau += mu_a;
+}
+Lo = B*e^(tau)
+```
+
+```ad-missing
+Check one is better, front to back or back to front, in terms of computational power
+(at what point is it useless to continue?)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

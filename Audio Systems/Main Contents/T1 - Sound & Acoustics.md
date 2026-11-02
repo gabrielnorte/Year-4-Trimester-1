@@ -33,8 +33,10 @@ $$SIL (dB)= 10\log_{10}\left( \frac{I}{I_{0}} \right)$$
 Where $I_{0}$ is $10^{-12} W$, as the threshold of human hearing
 
 ```ad-danger
-Note that log use in SIL. IT DOESN'T USE $20\log_{10}$, that corresponds to the conversion between volts and dB, this is different
+Note that log use in SIL. IT DOESN'T USE $20\log_{10}$, that corresponds to the conversion between volts and dB, this is differen.
+We don't really use SIL as pressure is easier to measure than $I$
 ```
+
 ```ad-info
 $dB$ always correspond to a ratio, be it pressure or sound intensity. What changes is the log scale, if it squared or not, and the units it corresponds to
 ```
