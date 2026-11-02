@@ -134,3 +134,20 @@ Depending on the room size and dimensions, reflections are prone to occur in man
 
 
 ## [QUIZ](https://docs.google.com/forms/d/e/1FAIpQLSciYVTAJnJEQrUc__rKA5IxUJ14__S9i5IvTATJSciTMJcFgw/viewform)
+
+---
+```ad-summary
+### dB clarification
+$${\color{\RED}dBV} = 20\log_{10}\left( \frac{V}{V_{0}} \right) = 20\log_{10}(V)$$
+$${\color{\LIGHTGREEN}dBu} = 20\log_{10}\left( \frac{V_{rms}}{V_{0}} \right) = 20\log_{10}\left( \frac{V_{rms}}{0.775 (rms)} \right)$$
+$$V_{rms} = 0.707·V$$
+$${\color{\SKYBLUE}dBW} = 10\log_{10}\left( \frac{W}{W_{0}} \right) = 10\log_{10}(W)$$
+$${\color{\MAGENTA}dBm} = 10\log_{10}\left( \frac{W}{W_{0}} \right) = 10\log_{10}\left( \frac{W}{10^{-3}} \right)$$
+- For $dBm$, the $10^{-3}$ is in $W_{RMS}$, thus the numerator is also $W_{RMS}$
+Historically, $W_0 = \frac{(0.775)^2}{600} = 10^{-3}$, this makes $dBu$ and $dBm$ equivalent electrically
+	The $600\Omega$ comes frmo standard power lines
+
+---
+```
+
+

@@ -60,10 +60,60 @@ The way the speaker is mounted (not the enclosure) also affects the output
 
 ## Passive radiators and Band Pass enclosure
 Just with the enclosure, we can obtain either radiators or band pass filters due to the enclosure shape
-# Crossover
-# Specification
-# High and low impedance lines 
-# Studio and broadcast
-# Sound reinforcement
-# Subwoofer alignment 
-# Electromechanical acoustic analogies
+- Depending on the shape, the added radiance created by the enclosure depends on the wavelength and the actual enclosure bounds
+# Specifications
+![[T4 - Sound Playback and Loudspeakers-1793642817561.webp]]
+## Sensitivity
+For speakers:
+- Measured at 1 m
+- 1 KHZ
+- 1W
+
+The resulting SPL is the sensitivity, though it's still important to differentiate **vertical and horizontal sensitivity** - LIKE THE CARDIOD SHAPE IN MICROPHONES
+- Rotating the speaker will yield different responses, just like when rotating the microphone
+```ad-info
+The sensitivity is always measured on-axis, so that the wavelengths look the same at that point. Even looking straight, the enclosure might direct the sound somewhere else, so on-axis means taking this into account
+- Modern systems usually clarify this or make the waves in-phase when they reach a micophone on axis
+```
+
+![[T4 - Sound Playback and Loudspeakers-1793642596638.webp]]
+
+- The angle just indicates where the sound is heard the best ($\approx$ same frequency response)
+- It doesn't have to do with horizontal sensitivity
+
+## Horizontal / Vertical Directivity
+What was said before, not all speakers handle directivity the same, some speakers can direct on a wider range than others
+- It can be controlled with **horns**
+
+
+# Crossovers
+They arise from the need to separate audios into different bands to send them to different channels (Tweeter, bass, ...)
+- Passive crossovers - *After amp*
+	- Capacitor, resistors, inductors, ...
+- Active Crossovers  - *Before amp*
+	- Separate with an active two way filter, then sent to a power amplifier with different drivers
+
+They are both circuits, but one uses passive components and the other active ones, so the only differences is in the setup:
+![[T4 - Sound Playback and Loudspeakers-1793643675804.webp]]
+	Due to the high amount of impedance components on the passive circuits, there's a lot of power consumption
+# Subwoofer alignment
+Aligning subwoofers is important for various acoustic and physical reasons
+- Radiation should usually go to the public, while minimizing to the stage to avoid unnecessary rumbling
+	- *STACKED* and *SEPARATED* woofers work best for this (in opposite directions with opposite phase, aligned to have same waves)
+
+# Onstage monitoring
+As said  in [[T1 - Sound & Acoustics]]]], line arrays benefit from cylindrical radiation, thus more power radiated with less distance falloff
+![[T4 - Sound Playback and Loudspeakers-1793646442198.webp]]
+
+# Loudspeaker connection
+Parallel connections in parallel end up being less costly in terms of impedance
+- Thus we can obtain more $W$ while the $V$ is kept constant
+- $I$ is increased to compensate and verify $W = VI$
+	- THIS CAN BURN THOUGH (HIGH CURRENT)
+
+A good balance is series-parallel, as it avoids the issue of extremely high current at the cost of low impedance
+
+
+# Closed box impedance
+![[T4 - Sound Playback and Loudspeakers-1793647351620.webp]]
+ 
