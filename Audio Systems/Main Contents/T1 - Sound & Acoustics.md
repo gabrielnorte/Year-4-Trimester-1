@@ -27,6 +27,7 @@ See [[Spherical vs Cylindrical Radiation]]
 ## SPL vs SIL
 **S**ound **P**ressure **L**evel indicates how lound a sound is in terms of **air pressure**. When using dBs, it is based on the minimum hearing level of 20 micropascals (SPL unit)
 - Based on pressure reference point (20 $\mu P$)
+$$dB SPL = 20\log_{10}\left( \frac{P}{P_{ref}} \right)$$
 **S**ound **I**ntensity **L**evel it's a logarithmic measure of sound intensity *in decibels*, computed through
 - Based on intensity reference point ($10^{-12} W$)
 $$SIL (dB)= 10\log_{10}\left( \frac{I}{I_{0}} \right)$$

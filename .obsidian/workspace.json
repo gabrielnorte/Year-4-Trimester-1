@@ -6,7 +6,7 @@
       {
         "id": "6fa0dae91da62d16",
         "type": "tabs",
-        "dimension": 76.96700507614213,
+        "dimension": 78.53996224040277,
         "children": [
           {
             "id": "b33bae83bd8800db",
@@ -70,40 +70,68 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Audio & Video Codification Systems/Main Contents/1. Introduction to Audio Coding.md",
+                "file": "Audio Systems/Main Contents/T3.5 - Electro Acoustic Analogies.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Introduction to Audio Coding"
+              "title": "T3.5 - Electro Acoustic Analogies"
             }
           },
           {
-            "id": "978e15d713248cb3",
+            "id": "01974bf1f5b30b0f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md",
-                "mode": "source",
-                "source": false
+                "file": "Audio Systems/TheoryContents/AES_T3_Electroacoustic_analogies_26-27.pdf",
+                "page": 6,
+                "left": -12,
+                "top": 26,
+                "zoom": 1.2458333333333333
               },
-              "icon": "lucide-file",
-              "title": "4. Psychoacoustic Principles"
+              "icon": "lucide-file-text",
+              "title": "AES_T3_Electroacoustic_analogies_26-27"
             }
           },
           {
             "id": "2f42d41b16384f3c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Audio & Video Codification Systems/Subcontents/Hz to Bark Visualization.md",
-                "mode": "source",
-                "source": false
+                "file": "Audio Systems/Seminars/Seminar2.md"
               },
-              "icon": "lucide-file",
-              "title": "Hz to Bark Visualization"
+              "icon": "excalidraw-icon",
+              "title": "Seminar2"
+            }
+          },
+          {
+            "id": "cbc3536bd6a50ff6",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Seminar 3 Deliverable.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Seminar 3 Deliverable"
+            }
+          },
+          {
+            "id": "2224d7fb89b203d6",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Audio Systems/Seminars/AES S2 - Microphones_26-27.pdf",
+                "page": 3,
+                "left": -11,
+                "top": 488,
+                "zoom": 1.4656862745098038
+              },
+              "icon": "lucide-file-text",
+              "title": "AES S2 - Microphones_26-27"
             }
           },
           {
@@ -165,12 +193,12 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "872383af69fbb505",
         "type": "split",
-        "dimension": 23.032994923857867,
+        "dimension": 21.46003775959723,
         "children": [
           {
             "id": "9e6cfc8e89dbb21a",
@@ -198,7 +226,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md",
+                    "file": "Audio Systems/Main Contents/T3.5 - Electro Acoustic Analogies.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
@@ -368,93 +396,53 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "floating": {
-    "id": "7b705e81502342cb",
-    "type": "floating",
-    "children": [
-      {
-        "id": "ea98c0ac8e017768",
-        "type": "window",
-        "children": [
-          {
-            "id": "a6701fdaf8c46102",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1257838fba13dbdb",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/4-Psychoacoustic-principles.pdf",
-                    "page": 23,
-                    "left": -10,
-                    "top": 519,
-                    "zoom": 1.459739934983746
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "4-Psychoacoustic-principles"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 307,
-        "y": 282,
-        "width": 1223,
-        "height": 1038,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "978e15d713248cb3",
+  "active": "abad818d8a1d64f3",
   "lastOpenFiles": [
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/4-Psychoacoustic-principles.pdf",
-    "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md",
+    "Audio Systems/TheoryContents/AES_T3_Electroacoustic_analogies_26-27.pdf",
+    "Audio Systems/TheoryContents/AES_T0_Basic_Concepts_26-27.pdf",
+    "Audio Systems/Main Contents/T3.5 - Electro Acoustic Analogies.md",
+    "Audio Systems/Main Contents/T1 - Sound & Acoustics.md",
+    "Excalidraw/Seminar 3 Deliverable.md",
+    "Audio Systems/Seminars/Seminar2.md",
+    "Audio Systems/Seminars/AES S2 - Microphones_26-27.pdf",
+    "Audio Systems/TheoryContents/AES_T1_Sound_and_Acoustics_26-27.pdf",
+    "Audio Systems/Main Contents/T3 - Sound and Capturing microphones.md",
+    "Audio Systems/Seminars/Seminar 3.md",
+    "Audio Systems/Media/Pasted image 20261103011409.png",
+    "Audio Systems/Media/Pasted image 20261103011226.png",
+    "Audio Systems/Media/Pasted image 20261103011214.png",
+    "Audio Systems/Media/Pasted image 20261103000941.png",
+    "Audio Systems/Seminars/AES S3 - Loudspeakers [26-27].pdf",
+    "Audio Systems/Seminars/Unconfirmed 136211.crdownload",
+    "Audio Systems/Seminars/AES T2 Seminar 1 - Basic Electronics.pdf",
+    "Audio & Video Codification Systems/Main Contents/Audio/4. Psychoacoustic Principles.md",
+    "Audio & Video Codification Systems/Main Contents/Audio/6. Neural Audio Compression.md",
+    "Audio & Video Codification Systems/Main Contents/Audio/1. Introduction to Audio Coding.md",
     "Audio & Video Codification Systems/Subcontents/Hz to Bark Visualization.md",
+    "Audio & Video Codification Systems/Main Contents/Audio/2. Quantization and Entropy Coding.md",
+    "Audio & Video Codification Systems/Main Contents/Audio/3. Time Frequency Representations.md",
+    "Audio & Video Codification Systems/Main Contents/Audio/5. Audio Coding Standards.md",
+    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000 Media/T1 - JPEG and JPEG 2000-1793635870298.webp",
+    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000 Media/T1 - JPEG and JPEG 2000-1793635884080.webp",
+    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000 Media",
+    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000.md",
+    "Audio & Video Codification Systems/Main Contents/Video",
+    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/4-Psychoacoustic-principles.pdf",
+    "Projects/Kahoot.md",
+    "Audio Systems/Media/Pasted Image 20261029193913_943.png",
+    "Audio Systems/Media/Pasted Image 20261029193857_815.png",
+    "Audio Systems/Media/Pasted Image 20261029190819_063.png",
+    "Audio Systems/Media/Pasted Image 20261029190030_000.png",
+    "Audio Systems/Main Contents/T4 - Sound Playback and Loudspeakers Media",
+    "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md",
     "Audio & Video Codification Systems/ExcalidrawNotes/3. Time Frequency Representations.md",
     "Audio & Video Codification Systems/Main Contents/3. Time Frequency Representations.md",
     "Advanced Computer Graphics (ACG)/Labs/Lab 2.md",
-    "Audio Systems/TheoryContents/AES_T3_Electroacoustic_analogies_26-27.pdf",
-    "Audio Systems/Seminars/Seminar 3.md",
-    "Audio Systems/Seminars/AES S3 - Loudspeakers [26-27].pdf",
     "Audio Systems/Main Contents/T4 - Sound Playback and Loudspeakers.md",
-    "Audio Systems/Main Contents/T3.5 - Electro Acoustic Analogies.md",
     "Audio & Video Codification Systems/Main Contents/6. Neural Audio Compression.md",
     "Audio & Video Codification Systems/Labs/Lab 5.md",
-    "Audio & Video Codification Systems/Labs/Lab 5 Media/Lab 5-1793109439806.webp",
-    "Audio & Video Codification Systems/Labs/Lab 5 Media",
-    "Advanced Computer Graphics (ACG)/Theory Contents/T6_RTE_VRE_AbsorptionOnly.pdf",
     "Advanced Computer Graphics (ACG)/Subcontents/Scattering Visualization.md",
     "Advanced Computer Graphics (ACG)/Subcontents/Emission Visualizations.md",
-    "Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering.md",
-    "Advanced Computer Graphics (ACG)/Labs/Lab 3.md",
-    "Advanced Computer Graphics (ACG)/Main Contents/T5 - Indirect Illumination and Path Tracing.md",
-    "Audio & Video Codification Systems/Media/Pasted image 20261026124645.png",
-    "Audio & Video Codification Systems/Media/Pasted image 20261026123845.png",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
-    "Audio & Video Codification Systems/Subcontents/Samples and filter banks visualization.md",
-    "Audio & Video Codification Systems/Media/Pasted image 20261026113402.png",
-    "Audio & Video Codification Systems/ExcalidrawNotes/Quantization.md",
-    "Audio & Video Codification Systems/ExcalidrawNotes/2. Quantization.md",
-    "Audio & Video Codification Systems/Main Contents/2. Quantization and Entropy Coding.md",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/2-Quantization-and -entropy-coding.pdf",
-    "Audio & Video Codification Systems/Subcontents/PDF-optimized PCM.md",
-    "Audio & Video Codification Systems/Main Contents/1. Introduction to Audio Coding.md",
-    "Audio & Video Codification Systems/Subcontents/Probability Density Functions and SNR.md",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/1-Introduction-to-audio-coding.pdf",
-    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T3 - Bounding Boxes, RayCasting.md",
-    "Audio & Video Codification Systems/Subcontents/Bit-rate ladder, compression as a scale.md",
-    "Audio & Video Codification Systems/Main Contents/5. Audio Coding Standards.md",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/5-Audio-coding-standards.pdf",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/6-Neural-audio-compression.pdf",
-    "Audio & Video Codification Systems/Media/Pasted image 20261020123346.png",
-    "Audio Systems/Media/Pasted image 20261020113940.png",
-    "Audio Systems/Media/T1 - Sound & Acoustics-1792488564404.webp",
-    "Audio Systems/Media/Pasted image 20261018193442.png",
-    "Audio Systems/Media/Pasted image 20261018175952.png",
-    "Audio Systems/Media/Pasted image 20261018175933.png"
+    "Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering.md"
   ]
 }
