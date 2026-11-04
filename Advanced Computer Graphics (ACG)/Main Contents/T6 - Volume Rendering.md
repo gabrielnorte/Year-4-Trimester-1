@@ -107,7 +107,7 @@ Which makes sense, as the light $B$ that goes in, gets altered by $\mu_{a}$ at t
 - The whole exponent term is called **Transmittance $T$**
 
 With this, the equation can be simplified to
-$$L(t) = Be^{-\tau(0,t)}$$
+$$\boxed{L(t) = Be^{-\tau(0,t)}}$$
 $$L(t) =BT$$
 - $T(t_{a}, t_{b}) = e^{-\tau(t_{a}, t_{b})}$ - *Beer-Lambert law*
 
@@ -164,6 +164,7 @@ for (i = start_point; i < start_point+1; i+step)) {
 }
 Lo = B*e^(tau)
 ```
+![[T7_FullVolumeRendering.pdf#page=8&rect=39,59,956,374|T7_FullVolumeRendering, p.8]]
 
 ```ad-missing
 Check one is better, front to back or back to front, in terms of computational power
