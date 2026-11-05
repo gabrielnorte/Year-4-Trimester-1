@@ -10,9 +10,17 @@ The **speed of sound** can be denoted as $\text{sound speed} = \sqrt{ \frac{\tex
 
 ## Distance to source influence 
 Following the inverse square law
-$$I = \frac{QW}{4\pi r^2}$$
+$$I = \frac{QW}{4\pi r^2} \quad \quad \Delta L = 20\log_{10}\left( \frac{r_{1}}{r_{2}} \right)$$
 	$4\pi r²$: Omnidirectional radiation of sound
-	
+	$r_{1}$: Original distance, $r_{2}$ = New distance, $\Delta L$: Difference in levels for these distances
+	Since it's 20log, $+6 dB$ every time distance is doubled
+```ad-important
+Unlike independent $dB SPL$ measures, $\Delta L$ can be added to any dB without issue as it indicates a change
+$$\color{LIGHTGREEN}dB\text{(Any type)} + \Delta L$$
+$$\color{LIGHTGREEN}dB(Type)+dB(Gain)$$
+$$\color{RED}dB+dB$$
+$$\color{RED}dB(type)+dB(same type)$$
+```
 
 ```ad-info
 Doubling the distance: Reduces $I$ by 4, sound pressure by 2,  $-6 dB$
@@ -27,6 +35,7 @@ See [[Spherical vs Cylindrical Radiation]]
 ## SPL vs SIL
 **S**ound **P**ressure **L**evel indicates how lound a sound is in terms of **air pressure**. When using dBs, it is based on the minimum hearing level of 20 micropascals (SPL unit)
 - Based on pressure reference point (20 $\mu P$)
+- Allows us to obtain the pressure given the $dB SPL$
 $$dB SPL = 20\log_{10}\left( \frac{P}{P_{ref}} \right)$$
 **S**ound **I**ntensity **L**evel it's a logarithmic measure of sound intensity *in decibels*, computed through
 - Based on intensity reference point ($10^{-12} W$)

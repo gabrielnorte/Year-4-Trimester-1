@@ -35,19 +35,15 @@ Due to the small and **light** membrane, the sensitivity is improved compare to 
 ```ad-danger
 Due to the small corrugated ribbon, loud soud can easily break it even without being connecteds
 ```
-# Propagation shapes
-```ad-important
-For different frequencies, the cardiod shape can change
-![[T3 - Sound and Capturing microphones-1792085169277.webp]]
-	SM58
-```
-
-# Electrostatic Microphones
-## Condenser microphones
-
 # Piezoelectric transduction
 Used in acoustic guitar pickups, contact microphones or even violin bridges
 They're just a material that generates a voltage when flexed or deformed
+# Electrostatic Microphones
+## Condenser microphones
+
+---
+![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=13&rect=21,29,711,437|AES_T3_Sound_Capturing_and_Microphones_26-27, p.13]]
+
 
 ```ad-info
 Different microphones provide different frequency responses, which means that, to obtain the voltage of the microhphone given a dBSPL input, we need to take into account
@@ -55,8 +51,33 @@ Different microphones provide different frequency responses, which means that, t
 2. Microphone sensitivity
 ```
 
-# Distance and directivity factors
+---
+# Propagation shapes
+```ad-important
+For different frequencies, the cardiod shape can change
+![[T3 - Sound and Capturing microphones-1792085169277.webp]]
+	SM58
+```
+We will denote that
+- **Gradient pressure microphones**: Directional microphones
+- **Pressure microphones**: Omnidirectional microphones
+
+These propagation types can also vary with the frequency, and microphones like the **AKG P420** have a switch to change it manually
+
+## Distance and directivity factors
 ![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=18&rect=80,88,651,460|AES_T3_Sound_Capturing_and_Microphones_26-27, p.18]]
+
+## Proximity effect
+For directional microphones, getting close to the object that emits sound will create a large increase on the low end. This is not present on omnidirectional microphones, which present a full band increase
+
+# Characterizing freq. response with microphone types
+All of the previous can be characterized through the frequency response
+- Different frequency responses on the low end depending on distance - *DIRECTIONAL (GRADIENT PRESSURE)*
+- 
+```ad-important
+Lab: Smaller echo delay for impulsive sound
+```
+
 
 # Dual diaphragm microphones
 Using microphones with two different capsules, we can mix their cardiods and add them up
@@ -67,15 +88,6 @@ See [[Special Applications]]
 # Multichannel capturing
 Using multiple microphones (or different capsules inside one microphone) going to one same input
 
-# Proximity effect
-
-# Characterizing freq. response with microphone types
-
-
-
-```ad-important
-Lab: Smaller echo delay for impulsive sound
-```
 
 # Inverse Square law and Relative Humidity
 ![[AES_T3_Sound_Capturing_and_Microphones_26-27.pdf#page=33&rect=171,123,553,452|AES_T3_Sound_Capturing_and_Microphones_26-27, p.33]]
@@ -94,5 +106,16 @@ Only for condenser microphones
 - Always done with 1 Pascal of pressure
 - 1 m away
 - At 1000 Hz
+
+*For exercises, we will modify the sensitivity to adjust to the new values*
+- Knowing the Pressure needed to obtain $x V$ if the sensitivity is $S_{V} = yV$: $\to yV·Pres = xV$  
+
+```ad-example
+![[T3 - Sound and Capturing microphones-1793830467259.webp]]
+```
+```ad-caution
+ALL OF THIS OPERATIONS WON'T BE DONE WITH $dB's$ since we need linear units. If we really wanted to do it we would need to turn everything into $dB$ with log
+```
+
 
 See comparisons and such on [[T3.5 - Electro Acoustic Analogies]]
