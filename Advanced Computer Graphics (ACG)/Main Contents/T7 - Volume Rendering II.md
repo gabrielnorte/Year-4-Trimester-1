@@ -36,7 +36,15 @@ $\color{SKYBLUE}T(t', t)\to\text{Transmittance}$
 - $T(t', t)$ gets smaller the further in we are into the volume, as less space has to be traversed for the light to go out t the viewer
 - So gain at the beginning will get scaled up by a really small transmittance, as not much will get out from that point, while close to the end, transmittance will be big and gain won't be small
 $\color{GREEN}BT(0, t)$
-- Absorption term
+- Absorption term (from beginning to end)
+
+## Riemann Sum approximation 
+$$\sum_{i = 0}^{N-1} \mu_{a}(t_{i})L_{e}(t_{i})T(t_{i}, t)\Delta t + BT(0, t)$$
+Where the first $T(t_{i}, t)$ is the cumulative transmittance from the current position till the end 
+$$\sum_{i=0}^{N-1}\mu_{a}(t_{i})L_{e}(t_{i})e^{-\tau(t_{i}, t)}\Delta t +Be^{-\tau(0, t)}$$
+```ad-important
+When doing back to front, $\tau(t, t')$, this way, the integral is in the correct order
+```
 
 ## Ray marching with emission absorption model
 ```c++
@@ -71,7 +79,7 @@ while t > 0
 	mu_a = getABsorption(t)
 	L_e = getEmission
 	pixelColor = mu_a*L_e * exp(-tau)*Delta
-	tau += mu*Delta
+	tau += mu_a*Delta
 	t -= Delta
 
 pixelColor += Bexp(-tau)
@@ -106,14 +114,15 @@ Indirect illumination on the GPU gets too hard (volumetric path tracing)
 
 ## Phase functions
 ![[T7_FullVolumeRendering.pdf#page=21&rect=46,172,938,537|T7_FullVolumeRendering, p.21]]
-It's sort of the volumetric equivalent to the phong's BRDF.
+It's sort of the volumetric equivalent to the phong's BRDF (See [[Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering#In scattering (increase of radiance)]])
+
 As in the **shininess coefficient**, we take a $\color{LIGHTGREEN}\text{Assymetric parameter}$ $\color{LIGHTGREEN}g$ that indicates where this circle will lay, indicating where all the light rays will get reflected
 ![[T7_FullVolumeRendering.pdf#page=24&rect=60,98,780,497|T7_FullVolumeRendering, p.24]]
 
 See [[Additional assymetric parameter visualization]]
 
 ```ad-info
-Negative parameter: Light scattering **out**
+Negative parameter: Light scattering **out** (looks more solid, as in absorbed light)
 Positive parameter: Light scattering **in**
 $g = 0$: Diffuse, light scatters in all possible directions
 ```
@@ -135,12 +144,13 @@ Due to the time dependency, it is likely that values between voxels changed whil
 $$f(p) = (1-x)f(a)+xf(b)$$
 - $x$ as a weighting factor
 
-On **regular grids**, let $i$ be the index of the vertices in a 1D regular grid, and $s$ the distance between grid points. Thus for a point $p$ such $v_{i} \leq p \leq v_{i+1}$
-
+On **regular grids**, let $i$ be the index of the vertices in a 1D regular grid, and $s$ the distance between grid points. Thus for a point $p$ such $v_{i} \leq p \leq v_{i+1}$, the linear interpolation is
+$$f(p) = (1-x)f(v_{i})+xf(v_{i+1})$$
+	Where $x = \frac{d}{s}$, d as the distance between $v_{i}$ and p
 
 ## Bilinear interpolation
-Used for bidimensional data
+Used for bidimensional data, just simplify the 2D coordinates to 1D, and perform linear interpolation with each dimension separately
 
 ## Trilinear interpolation
-Performs bilinear interpolation on two faces and then in interpolates the result 
+Performs bilinear interpolation on two faces and then linearly interpolates the result 
 - Directly available in the GPU

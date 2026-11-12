@@ -10,7 +10,11 @@ The current approach does not provide soft shadows, which will be obtained using
 # Light
 ![[T4_REq_MC_Direct.pdf#page=8&rect=49,135,952,415|T4_REq_MC_Direct, p.8]]
 Remember that color is not a property of an object, it's a sensation that our brain detects a certain way, in color
-- The physical quantity that our eyes perceive is denoted as **radiation**
+- The physical quantity of color that our eyes perceive is denoted as **RADIANCE**
+```ad-important
+Irradiance: Intensity of light at a distance
+Radiance: The color at a point resulting from photons that hit p and their wavelength. Captures the appearance of object rather than just how much light arrives at that point
+```
 
 See [[Angles and Solid angles]]
 
@@ -35,19 +39,26 @@ We will use this measure for directions
 # Radiance measures
 *Radiance is one a set of radiometric quantities used to describe the interaction of visible electromagnetic radiation with matter*
 
-| Radiometric Magnitude | Symbol | Units              |                                                                |
-| --------------------- | ------ | ------------------ | -------------------------------------------------------------- |
-| Flux                  | $\Phi$ | W (J/s)            | How many light traverses a surface in a given time             |
-| Irradiance            | E      | W/m^2              | Used for surface lights (either sources or receiving surfaces) |
-| Radiant intensity     | $I$    | W/sr (steradiants) |                                                                |
-| Radiance              | $L$    | $W / (m² s r)$     | The amout of light an an infinitessimal direction              |
+| Radiometric Magnitude | Symbol | Units              |                                                                                     |
+| --------------------- | ------ | ------------------ | ----------------------------------------------------------------------------------- |
+| Flux                  | $\Phi$ | W (J/s)            | How many light traverses a surface in a given time                                  |
+| Irradiance            | E      | W/m^2              | Used for surface lights (either sources or receiving surfaces), depends on distance |
+| Radiant intensity     | $I$    | W/sr (steradiants) | Light actually emitted                                                              |
+| Radiance              | $L$    | $W / (m² s r)$     | The amount of light an an infinitessimal direction, depends on solid angle          |
 ![[T4_REq_MC_Direct.pdf#page=17&rect=57,156,720,440|T4_REq_MC_Direct, p.17]]
-
+- 3D irradiance: Received light at a point $p$ based on many light sources
+- 3D radiance: Light coming from a differential solid angle
 # The rendering equation
-To get the amout of light on a given pixel, we will get the intersection point and check the light that gets bounced back onto that same pixel
+To get the amount of light on a given pixel, we will get the intersection point and check the light that gets bounced back onto that same pixel
 ## Hemispherical Formulation
 $L_{e}$: Self emitted light on the same direction (only for emissive objects)
 ![[T4_REq_MC_Direct.pdf#page=19&rect=116,42,929,309|T4_REq_MC_Direct, p.19]]
+Essentially, the use of area lights means that we can't no longer just do $\sum$ over the lights,we need to check the whole hemisphere (directions $w_{i}$, sent from the differential solid angle) around the point to check for all incoming light.
+With area lights, emissive materials become a thing, so we consider an extra term $L_{e}$ for the light that the object at the current pixel emits
+
+```ad-info
+The term $L_i$ is used to evaluate the light at the second ray's intersection. We will divide it into **DIRECT** and **INDIRECT**. For direct, simply put that it's the lights intensity, for indirect, it's many rays recursively adding light
+```
 
 [Video demo](https://www.youtube.com/watch?v=eo_MTI-d28s)
 
@@ -58,7 +69,8 @@ The Bidirectional Reflectance Distribution Function just indicates how the mater
 $$\forall w_{o} = \int_{\Omega_{2\pi}} f_{r}(w_{0}, w_{i})(N·w_{i})dw_{i} \leq 1$$
 The **phong reflection model**:
 ![[T4_REq_MC_Direct.pdf#page=22&rect=51,103,754,375|T4_REq_MC_Direct, p.22]]
-Thus, **we use a modified version of it, that normalizes the coefficients**
+Thus, **we use a modified version of it, that normalizes the coefficients** by $\pi+\frac{2\pi}{s+2}$
+- WE ASSUME $w_{0} = N$ as that gives us the biggest dot product, thus the upper bound we're looking for
 ![[T4_REq_MC_Direct.pdf#page=23&rect=57,199,748,337|T4_REq_MC_Direct, p.23]]
 
 ## Solving the rendering equation
@@ -80,6 +92,7 @@ $$\hat{I} = \frac{1}{N}\sum_{j=1}^{N} \frac{f(x_{j})}{p(x_{j})}$$
   
 **Disadvantages**
 - Slow convergence (needs many samples for accurate results)
+- Variance: Leads to noisy signals due to innacurate representations (after all, sampling is random)
 ```
 ![[T4_REq_MC_Direct.pdf#page=30&rect=62,195,737,432|T4_REq_MC_Direct, p.30]]
 	The artifacts are due to wrong estimations between pixels 
@@ -103,6 +116,9 @@ With montecarlo, we will estimate the second half of the BRDF equation as follow
 ## Estimating Direct Illumination 
 At each visible point we generate a set of uniformly distributed random directions over the hemisphere ($p(w) = \frac{1}{2\pi}$), then if it touches a light source, account for its distribution
 If not, $L_{i}^{dir}(x, w_{0}) = 0$, that is, no direct light
+$$L_{o}(x, w_{0}) = \frac{2\pi}{N}\sum^N L_{i}(x, w_{i})f_{r}(w_{i}, w_{0})(w_{i}·N)$$
+- $L_{i}$: Light intensity (or emitted light) of the object found with the random ray $w_{i}$. $L_{i}(x, w_{i}) = 0$ if the ray doesn't hit an emissive surface
+- PDF is uniform, $\frac{1}{2\pi}$, thus $2\pi$ comes out on the enumerator
 
 ![[T4_REq_MC_Direct.pdf#page=37&rect=170,12,795,491|T4_REq_MC_Direct, p.37]]
 ```ad-caution

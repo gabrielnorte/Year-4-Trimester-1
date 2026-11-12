@@ -51,6 +51,8 @@ We can also use the ray's depth to handle infinite recursion
 		r_sec = Ray(x, wi);
 		L_o += ComputeRadiance(r_sec)*x.brdf(wi, -r.d)*dot(x.normal, wi) / pdf //Montercalo -> L_0 + (1/N)sum (L_i*cos)/pdf * f_r*
 	return L_o;
+	
+	//This is just a single sample, this whole section should be repeated N times and then averaged by N (or spp)
 ```
 
 ```ad-info
@@ -64,12 +66,22 @@ For now we don't consider rays from a single pixel that start from different ori
 ```
 
 - Since we're taking emission as part of the indirect illumination algorithm, we don't consider it on the direct illumination one
+
+## Pure path tracing limitations
+- Slow
+- Requires too many samples 
+
+As suggestions, we will consider:
+- Separate radiance into direct and indirect - Increases speed
+- Compute the two components separately - More organized
+- Sample light sources area for the direct component (more efficient) - REDUCES NOISE
 # Path Tracing with next event estimation
 We first shoot a ray and, from the intersection, 
 $$L_{i}(\text{pixel}, r.d ) = L_{o}(x. -r.d) = L_{e}(x, -r.d)+L_{r}(x, -r.d)$$
 - $L_{e}$: Emissive material light
 - $L_{r}$: Light information, which we divide into **direct** and **indirect**
-$$L_{r}() = L_{D}$$
+$$L_{i}() = L_{e}(x, w_{o}) + L_{r}(x, w_{i})$$
+$$L_{r}(x, w_{i}) = L_{d}(x, w_{i})$$
 
 ```c++
 DirectRadiance(x, ωo) 
@@ -92,12 +104,55 @@ IndirectRadiance(x, ωo, depth)
 	return L_ind;
 ```
 
-# Advanced Path Tracing
-Any integral can be approximated with MONTECARLO
-```ad-missing
-The expected value of MONTECARLO is equal to the integral, check proof
+```ad-info
+Essentially, pure path tracing "included" direct illuminations when the ray hit an emissive surface at depth one. Thus, when we separate direct and indirect on the nee shader, since these emission surfaces can get counted twice due to both direct and indirect handling it, **emissive surfaces are only counted once** (outside both direct and indirect)
+![[T5 - Indirect Illumination and Path Tracing-1794418948268.webp]]
+
+On the recursive step in IndirectIllumination(), if the material is emissive, we return 
 ```
 
-The thing is, we can reduce the error by trying to emulate a function that ressembles the pdf
+# NEE and Pure path tracing
+Pure path tracing:
+- Mainly indirect, though due to hemispherical approach, direct illumination can happen at depth 1
+- Noisy (hemispherical algorithm)
+- Slow
+
+NEE:
+- Separate direct and indirect
+- Emission handled else where, counted only once
+- Direct uses area sampling less noise (**and less samples needed, at least for direct illumination**)
+
+# Advanced Path Tracing
+Any integral can be approximated with MONTECARLO
+- The expected value of montecarlo is the theoretical value of the integral:
+![[T5_PathTracing.pdf#page=38&rect=70,42,843,393|T5_PathTracing, p.38]]
+	An estimator so that $E[\hat{I}] = I$ is unbiased, it tries to approximate the actual integral with the only source of error being the variance
+	Biased estimators present a systematic error $B$, which drifts montecarlo approximations away from the integral
+
+As for the variance, **it indicates how all the different samples change on hemisphere**, and applying montecarlo, THE NOISE DUE TO VARIANCE REDUCES WITH A FACTOR OF N, while the noise's standard deviation changes with a factor of $\sqrt{ N }$ 
+- **Montecarlo converges slowly due to this factor of N and $\sqrt{ N }$**
+
+To reduce the variance, we need to find a pdf that has the same shape as the integrant, obtained by setting $p(x) = \frac{f(x)}{I}$, *but we don't know neither f(x) or I*
+
+In real applications, we will "guess" the shape of the integrand based on prior knowledge
 - We need to find the **most important samples**
-- 
+
+## Importance Sampling
+![[T5_PathTracing.pdf#page=49&rect=51,115,909,476|T5_PathTracing, p.49]]
+In our case, with $f(x)$ being $L_{i}(x, w_{0})$, the function has a higher value where there's light involved. Through hemispherical sampling, only sampling the light areas would be perfect to avoid noise, thus we need a pdf that ressembles this
+
+```ad-failure
+A bad PDF can be worse than a uniform, unbiased PDF
+![[T5_PathTracing.pdf#page=50&rect=49,60,907,405|T5_PathTracing, p.50]]
+```
+
+Given that the integrand is based off $fr$ and $(w_{i}·\cos \theta_{i})$, we can use this information. Focusing on the BRDF function
+## Diffuse BRDF
+![[T5_PathTracing.pdf#page=52&rect=37,5,852,390|T5_PathTracing, p.52]]
+
+## Specular (Glossy) BRDF
+![[T5_PathTracing.pdf#page=53&rect=44,61,768,390|T5_PathTracing, p.53]]
+
+```ad-info
+It can be assumed that the new montecarlo estimator with a pdf based on importance sampling is unbiased
+```

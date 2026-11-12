@@ -56,7 +56,26 @@ The way the speaker is mounted (not the enclosure) also affects the output
 # Loudspeaker enclosure
 ![[T4_Sound Playback and Loudspeakers_26-27.pdf#page=19&rect=13,8,693,456|T4_Sound Playback and Loudspeakers_26-27, p.19]]
 ## Bass reflex enclosures
-![[T4_Sound Playback and Loudspeakers_26-27.pdf#page=21&rect=52,69,697,454|T4_Sound Playback and Loudspeakers_26-27, p.21]]
+![[T4 - Sound Playback and Loudspeakers-1794394304811.webp]]
+They're enclosures with a dedicated opening for specific frequencies
+![[T4 - Sound Playback and Loudspeakers-1793647351620.webp]]
+```ad-question
+What's the sense behind resonances happening on both maximum and minimum impedances?
+It would make sense for resonance to occur when impedance is at its minimum, since there's less opposition
+```
+
+## Sealed box enclosure
+Like the KRK speaker, it's just a speaker with no extra openings, just the output membranes
+
+```ad-info
+**For speakers, resonance is achieved when maximum impedance happens. Even though less current travels**
+```
+
+## Sealex box & Bass Reflex Plotted
+![[T4 - Sound Playback and Loudspeakers-1794398665405.webp]]
+**Phase**: ALWAYS CROSSES ZERO AT THE PORT RESONANCE FREQUENCY 
+- Look at shape (peaks and dips) to determine if phase corresponds to bass reflex or sealed box
+
 
 ## Passive radiators and Band Pass enclosure
 Just with the enclosure, we can obtain either radiators or band pass filters due to the enclosure shape
@@ -106,14 +125,17 @@ As said  in [[T1 - Sound & Acoustics]]]], line arrays benefit from cylindrical r
 ![[T4 - Sound Playback and Loudspeakers-1793646442198.webp]]
 
 # Loudspeaker connection
-Parallel connections in parallel end up being less costly in terms of impedance
+A good balance is series-parallel, as it avoids the issue of extremely high current at the cost of low impedance
+
+For speakers:
+- **Series**: Sum of impendances
+- **Parallel**: $\frac{\text{Sum of Impedances}}{\text{nº speakers}}$
+Parallel connections end up being less costly in terms of impedance, even with many speakers
 - Thus we can obtain more $W$ while the $V$ is kept constant
 - $I$ is increased to compensate and verify $W = VI$
 	- THIS CAN BURN THOUGH (HIGH CURRENT)
+	- Abusing parallel speakers might create **way too much current, which is a problem**
 
-A good balance is series-parallel, as it avoids the issue of extremely high current at the cost of low impedance
 
 
-# Closed box impedance
-![[T4 - Sound Playback and Loudspeakers-1793647351620.webp]]
  

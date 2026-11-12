@@ -33,7 +33,7 @@ The efficiency of this method is tied directly to how well the shape is enclosed
 See [[Acceleration Structures For Ray Tracing]]
 
 
-# Ray casting
+# Ray casting & lights
 Just considering a scene with diffuse or glossy objects (as available in the phong model).
 A ray is shot from the center of the pixel and, when intersecting with an object, it gets is color from the ray that gets reflected, based on light and the material itself
 
@@ -46,7 +46,7 @@ We will study light behavior with raycasts starting from the most simple light s
 
 They're characterized by a 3D position $p_{L}$ and an intensity 𝑰 (RGB)
 
-We then denote **direct irradiance $E_{i}(p)$** at a shading point $p$ due to a light source $L$ with position $p_{L}$
+We then denote **direct Irradiance $E_{i}(p)$** at a shading point $p$ due to a light source $L$ with position $p_{L}$
 - LIGHT'S INTENSITY DECREASES QUADRATICALLY
 $$E_{i}(p) = \frac{I_{L}}{d^2}, \text{where } ||p_{L}-p||$$
 ```ad-note
@@ -62,14 +62,14 @@ The operation $w_i·N$ is just the "projection" of $w_i$ onto the vector N, whic
 ```
 
 ```ad-caution
-This might appear in the exam
+This might appear in the exam.
+**FOR ALL THESE OPERATIONS, DIRECTION VECTORS SHOULD BE NORMALIZED**
 ```
 
 # Light - material interactions
 - Reflections at the surface (specular (mirror), diffuse or glossy)
 - Refraction (caustics)
 - Subsurface scaterring
-
 ## Reflections at the surface
 ![[T3_RayCasting_RRT.pdf#page=22&rect=93,59,671,413|T3_RayCasting_RRT, p.22]]
 	The more spread out the lights, the larger the specular reflection, leading to solid color
@@ -105,7 +105,7 @@ With $V(p, p_{L})$ being the visibility term, where we use the shadow ray to det
 Ambient light is not multiplied by this function since it is not affected by present light sources
 
 ```ad-caution
-Dot products are only done between vectors, RGB's are multiplied element wise
+Dot products are only done between vectors ($w_i, w_r, N, w_o$), RGB's, including light and coefficients are multiplied element wise
 ```
 
 ### Applied to phong reflection model (simplification)
@@ -124,6 +124,9 @@ For multiple light sources then:
 # Specular Transmission
 With tranmission, we need to compute the ray that gets transmitted through a medium. For that, we use **snell's law**
 $$\frac{\sin \theta_{i}}{\sin \theta_{t}} = \frac{\eta_{t}}{\eta_{i}} = \eta = \mu_{t}$$
+```ad-info
+Both angles increase the same, but when going from a dense to less dense ($\eta_1 > \eta_2$), the second angle increases even more, to the point where for a certain $\theta_i$, $\theta_2$ touches the surface and only reflection remains (TOTAL INTERNAL REFLECTION)
+```
 Similar to the specular reflection $w_{r}$, just with vector addition we can do:
 ![[T3_RayCasting_RRT.pdf#page=40&rect=70,72,888,367|T3_RayCasting_RRT, p.40]]
 [[Full transmitted ray proof]]

@@ -26,12 +26,12 @@ Similar to surface materials, **volumes exhibit different appearances and featur
 ## Scattering
 ![[T6_RTE_VRE_AbsorptionOnly.pdf#page=17&rect=56,109,904,409|T6_RTE_VRE_AbsorptionOnly, p.17]]
 
-# Problem formalization
+# Problem formalization - MACRO LEVEL
 We will consider the following setup:
 1. Ray through medium
 2. Medium composed of particles that absorb, scatter or emit radiance
 
-Aside from the ray direction, we now consider $p_{0} = r(0)$ as the first position of the volume touched by the ray, and $p_{max} = r(t_{max})$
+Aside from the ray direction, we now consider $p_{0} = r(0)$ as the first position of the volume touched by the ray, and $p_{max} = r(t_{max})$. *We are only interested in this region*
 
 ```ad-important
 We will consider that the light at $p_0$ is the same light that they ray was carrying in the first place
@@ -39,6 +39,7 @@ $$L(0) = B$$
 	(boundary condition)
 ```
 
+Micro level involves adding the notion of absorption, scattering and emission on an infinitessimal level ($dt$)
 ## Absorption
 Consider an infinitesimal segment of the ray $dt$, with $L(T)$ as the amount of light going in
 - Medium characterized by absorption coefficient $\mu_{a}$
@@ -51,11 +52,13 @@ Larger values of 𝜇𝑎 → more absorption → darker appearance
 
 See [[Absorption visualizations]]
 
----
+### Microlevel
 Along the infinitesimal segment, radiance is reduced due to absorptions by an amount $\Delta L$, such that:
 $$L' = L-(\mu_{a}\Delta t)L$$
 ![[T6_RTE_VRE_AbsorptionOnly.pdf#page=25&rect=34,38,941,278|T6_RTE_VRE_AbsorptionOnly, p.25]]
-
+Thus, using $\Delta L$ as the change in variance and $\frac{\Delta L}{\Delta t}$ as the change in variance per $\Delta t$, we can reduce this to infinitessimal measures so that
+$$\frac{dL}{dt}(t) = -\mu_{a}(t)L(t)$$
+	Of course, we would need to evaluate this expression between $t_{min}$ and $t_{max}$ (the entire ray segment inside the volume)
 ## Emission
 Increased radiance along a ray due to chemical, thermal, or nuclear processes that convert energy into visible light
 - Characterized by the relation between how efficiently an object absorbs light ($\mu_{a}$) and how efficiently it emits light $L_{e}$
@@ -63,21 +66,30 @@ Increased radiance along a ray due to chemical, thermal, or nuclear processes th
 
 See [[Emission Visualizations]]
 
----
+### Microlevel
 ![[T6_RTE_VRE_AbsorptionOnly.pdf#page=28&rect=24,80,935,524|T6_RTE_VRE_AbsorptionOnly, p.28]]
-
+- Positive since light **increases**
+- Same reasoning as before, but now positive since $L+\mu_{a}$
 ## Scattering 
 ### Out scattering (reduction of radiance)
 Now take a **scattering coefficient** $\mu_{s}$ which determines how much the light will scatter.
 We can denote the change in radiance as 
 $$\frac{dL}{dt} = -\mu_{s}(t)L(t)$$
+*Same as absorption but using $\mu_{s}$* instead
 ### In scattering (increase of radiance)
 This is light that gets scattered inside the volume
-$$\frac{dL}{dt} = \mu_{s}L_{s}(t)$$Where the total amount of light that gets scattered ($L_{s}$) (*scattered radiance*), collects the incident radiance from all directions no the unit sphere, such that
+$$\frac{dL}{dt} = \mu_{s}(t)L_{s}(t)$$Where the total amount of light that gets scattered ($L_{s}$) (*scattered radiance*), collects the incident radiance from all directions no the unit sphere, such that
 $$L_{s}(t) = \int_{S^2}f_{t}(w, w_{i})L_{i}(t, w_{i}dw_{i})$$
-- Like in the BRDF, $f_{r}$ is the phase function, which characterizes the directional density of light scattered at a point 𝑡 in a medium 
+- $d_{t}$ is the phase function which characterizes the directional density of light scattered at a point 𝑡 in a medium **(i.e., the volume equivalent of the BRDF)**
 
 See [[Scattering Visualization]]
+
+```ad-summary
+Absorption: $\frac{dL}{dt}(t) = -\mu_{a}(t)L(t)$
+Emission: $\frac{dL}{dt}(t) = \mu_{a}(t)L_{e}(t)$
+Out-scattering: $\frac{dL}{dt} = -\mu_{s}(t)L(t)$
+In-scattering: $\frac{dL}{dt} = \mu_{s}(t)L_{s}(t)$ 
+```
 
 ---
 ```ad-summary
@@ -92,10 +104,8 @@ $$\Delta L(t) = \text{Absorbtion+Out scattering+Inscattering+Emission}$$
 For simplification, we can then take $\boxed{\mu_{t} = \mu_{a}+\mu_{s}}$, simplifying the equation to
 $$\boxed{\frac{dL}{dt}(t) = -\mu_{t}(t)L(t)+\mu_{s}(t)L_{s}(t)+\mu_{a}(t)L_{e}(t)}$$
 
+Given this, we don't want a single infinitessimal step $dL$, **we need to obtain the output light** ($L(t_{max})$) after interacting with the entire volume, for that, we use the *Volume Rendering Equation*
 # From the RTE to the Volume Rendering equation
-
-
----
 # Absortion-Only model Set up
 ![[T6_RTE_VRE_AbsorptionOnly.pdf#page=44&rect=54,73,843,377|T6_RTE_VRE_AbsorptionOnly, p.44]]
 Now, if we use the chain rule and set $f(t) = \ln(t)$ and $g(t) = L(t)$
@@ -114,18 +124,19 @@ $$L(t) =BT$$
 ## Approximation
 As to estimate this equation, we can either go with ray marching or montecarlo integration
 
-
 ---
 ```ad-info
 A medium / volume is **homogeneous** when its coefficients are constant
 - $\mu_a(t) = \bar{\mu}_a$
 - The self emitted light is also consatnt ($L_e(t) = \bar{L}_e$)
+- $\mu$ doesn't depend on $t$, thus the optical thickness is just $(t_b-t_a)·\mu_a$
   
 In **heterogeneous** media, these coefficients change
 ```
 
 Thus, when the medium is homogeneous, it can be proven that
-$$L(t) = Be^ {-\tau(0,t)} = Be^{-\tau \bar{\mu}_{a}}$$
+$$L(t) = Be^ {-\tau(0,t)} = Be^{-t \bar{\mu}_{a}}$$
+$$\tau = \int_{t_{a}}^{t_{b}}\mu_{a}(t) = (t_{b}-t_{a})\bar{\mu}_{a}$$
 However, on heterogeneous cases:
 - $\tau$ is actually the integral of $\mu_a$, thus, it's just the sum of the area under it
 - It can be simplified to a simple sum with **Riemann sum**
@@ -153,7 +164,6 @@ r.shoot()
 start_point = r.intersection()
 
 
-
 // Ray marching algorithm
 step = 1/10;
 tau = 0.0;
@@ -175,27 +185,3 @@ Check one is better, front to back or back to front, in terms of computational p
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# FINAL PROJECT IDEA
-God rays from cloud formations

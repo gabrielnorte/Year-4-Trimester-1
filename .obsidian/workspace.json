@@ -6,50 +6,148 @@
       {
         "id": "6fa0dae91da62d16",
         "type": "tabs",
-        "dimension": 78.53996224040277,
+        "dimension": 78.54571634269259,
         "children": [
           {
-            "id": "b33bae83bd8800db",
+            "id": "4a593c2b40f5615d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Advanced Computer Graphics (ACG)/Labs/Lab 1.md",
+                "file": "Advanced Computer Graphics (ACG)/Main Contents/T5 - Indirect Illumination and Path Tracing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 1"
+              "title": "T5 - Indirect Illumination and Path Tracing"
             }
           },
           {
-            "id": "488eb406483b44ec",
+            "id": "d5ed2d929ce7b151",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Audio Systems/TheoryContents/AES_T1_Sound_and_Acoustics_26-27.pdf",
-                "page": 16,
-                "left": -13,
-                "top": 425,
-                "zoom": 1.2197916666666666
+                "file": "Advanced Computer Graphics (ACG)/Theory Contents/T5_PathTracing.pdf",
+                "page": 50,
+                "left": -17,
+                "top": 533,
+                "zoom": 0.934375
               },
               "icon": "lucide-file-text",
-              "title": "AES_T1_Sound_and_Acoustics_26-27"
+              "title": "T5_PathTracing"
+            }
+          },
+          {
+            "id": "4764edf3df41ada3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "T6 - Volume Rendering"
+            }
+          },
+          {
+            "id": "147d3160675f7e50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Main Contents/T7 - Volume Rendering II.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "T7 - Volume Rendering II"
+            }
+          },
+          {
+            "id": "0cfd36ac013fc6c5",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/T7.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "T7"
+            }
+          },
+          {
+            "id": "1292a0f2700116d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "T6 - Volume Rendering"
+            }
+          },
+          {
+            "id": "89bee1f832fb6707",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Excalidraw Notes/T6 - Volume rendering.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "T6 - Volume rendering"
+            }
+          },
+          {
+            "id": "c546f7833db51ef7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Theory Contents/T6_RTE_VRE_AbsorptionOnly.pdf",
+                "page": 22,
+                "left": -17,
+                "top": 167,
+                "zoom": 0.934375
+              },
+              "icon": "lucide-file-text",
+              "title": "T6_RTE_VRE_AbsorptionOnly"
+            }
+          },
+          {
+            "id": "13455a002a4e3827",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Computer Graphics (ACG)/Media/Angles and Solid angles.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Angles and Solid angles"
             }
           },
           {
             "id": "97df69e4e3a905cb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
-                "mode": "source",
-                "source": false
+                "file": "Advanced Computer Graphics (ACG)/Theory Contents/T4_REq_MC_Direct.pdf",
+                "page": 4,
+                "left": -16,
+                "top": 430,
+                "zoom": 0.9343750000000001
               },
-              "icon": "lucide-file",
-              "title": "Full transmitted ray proof"
+              "icon": "lucide-file-text",
+              "title": "T4_REq_MC_Direct"
             }
           },
           {
@@ -129,8 +227,10 @@
               "type": "pdf",
               "state": {
                 "file": "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/1-Introduction-to-audio-coding.pdf",
-                "page": 1,
-                "zoom": 1
+                "page": 14,
+                "left": -16,
+                "top": 185,
+                "zoom": 0.9346086521630409
               },
               "icon": "lucide-file-text",
               "title": "1-Introduction-to-audio-coding"
@@ -142,7 +242,7 @@
       {
         "id": "872383af69fbb505",
         "type": "split",
-        "dimension": 21.46003775959723,
+        "dimension": 21.454283657307414,
         "children": [
           {
             "id": "9e6cfc8e89dbb21a",
@@ -170,7 +270,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Audio Systems/Seminars/Deliverables/Seminar 2 Deliverable.md",
+                    "file": "Advanced Computer Graphics (ACG)/Main Contents/T7 - Volume Rendering II.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
@@ -331,7 +431,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -349,52 +450,52 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bebf71b182b95753",
+  "active": "147d3160675f7e50",
   "lastOpenFiles": [
-    "Seminar 2 Deliverable.pdf",
-    "Audio Systems/Seminars/Deliverables/Seminar 2 Deliverable.md",
-    "Audio Systems/Seminars/Seminar2.md",
-    "Audio Systems/TheoryContents/AES_T3_Sound_Capturing_and_Microphones_26-27.pdf",
-    "Audio Systems/Main Contents/T3 - Sound and Capturing microphones.md",
-    "Audio Systems/Seminars/Seminar 3.md",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/2-Quantization-and -entropy-coding.pdf",
-    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/3-Time-frequency-analysis-filter-banks-and-transforms.pdf",
-    "Audio Systems/TheoryContents/AES_T0_Basic_Concepts_26-27.pdf",
-    "Audio Systems/Seminars/AES S2 - Microphones_26-27.pdf",
-    "Audio Systems/Main Contents/T2 - Basic Electronics.md",
-    "Audio Systems/Main Contents/T4 - Sound Playback and Loudspeakers.md",
-    "Audio Systems/Main Contents/T1 - Sound & Acoustics.md",
-    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T3 - Bounding Boxes, RayCasting.md",
-    "Audio Systems/TheoryContents/AES_T3_Electroacoustic_analogies_26-27.pdf",
-    "Audio & Video Codification Systems/ExcalidrawNotes/3. Time Frequency Representations.md",
-    "Audio Systems/TheoryContents/AES_Presentation_2026-27.pdf",
-    "Audio Systems/Seminars/AES T2 Seminar 1 - Basic Electronics.pdf",
-    "T3 - Sound and Capturing microphones-1793830467259.webp",
-    "Audio Systems/Seminars/Deliverables/Seminar 1.2 Deliverable.md",
-    "Excalidraw/Seminar 3 Deliverable.md",
-    "Audio & Video Codification Systems/Labs/Lab 6 - Neural Coding.md",
-    "Advanced Computer Graphics (ACG)/Theory Contents/T7_FullVolumeRendering.pdf",
-    "Advanced Computer Graphics (ACG)/Subcontents/Additional assymetric parameter visualization.md",
+    "Excalidraw/T7.md",
+    "Pasted image 20261112121134.png",
+    "Pasted image 20261112115946.png",
     "Advanced Computer Graphics (ACG)/Main Contents/T7 - Volume Rendering II.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T6 - Volume Rendering.md",
+    "Pasted Image 20261112004323_103.png",
+    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T6 - Volume rendering.md",
+    "Pasted image 20261112002538.png",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T6_RTE_VRE_AbsorptionOnly.pdf",
+    "Advanced Computer Graphics (ACG)/Subcontents/Scattering Visualization.md",
+    "Advanced Computer Graphics (ACG)/Subcontents/Absorption visualizations.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T4 - Rendering Equation.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T8 - Neural Radiance Fields (NerFS).md",
+    "Advanced Computer Graphics (ACG)/Media/Pasted Image 20261013171148_455.png",
+    "Advanced Computer Graphics (ACG)/Media/Pasted image 20261110142934.png",
+    "Advanced Computer Graphics (ACG)/Media/Pasted image 20261110234651.png",
+    "Advanced Computer Graphics (ACG)/Media/T5 - Indirect Illumination and Path Tracing-1794418948268.webp",
+    "Advanced Computer Graphics (ACG)/Media/Pasted image 20261111221935.png",
+    "Advanced Computer Graphics (ACG)/Media/T2 - Basic Raytracing-1794308886036.webp",
+    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T4.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T5 - Indirect Illumination and Path Tracing.md",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T5_PathTracing.pdf",
+    "Advanced Computer Graphics (ACG)/Main Contents/FINAL PROJECT.md",
+    "Advanced Computer Graphics (ACG)/Subcontents/Bouncing lights demo.md",
+    "Audio & Video Codification Systems/ContentsRepo/audio-coding-materials/lectures/1-Introduction-to-audio-coding.pdf",
+    "Advanced Computer Graphics (ACG)/Main Contents/T3 - Ray Casting, Recursive Ray TRacing.md",
+    "Advanced Computer Graphics (ACG)/Media/Angles and Solid angles.md",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T4_REq_MC_Direct.pdf",
+    "Advanced Computer Graphics (ACG)/Excalidraw Notes/T3 - Bounding Boxes, RayCasting, Phong.md",
+    "Audio Systems/TheoryContents/AES_T4_Sound Playback and Loudspeakers_26-27.pdf",
+    "Audio Systems/Seminars/Deliverables/Seminar 3 Deliverable.md",
+    "Audio Systems/Main Contents/T4 - Sound Playback and Loudspeakers.md",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T3_RayCasting_RRT.pdf",
+    "Audio Systems/Seminars/Seminar 3.md",
+    "Audio Systems/TheoryContents/Unconfirmed 836096.crdownload",
     "Audio Systems/Main Contents/T3.5 - Electro Acoustic Analogies.md",
-    "Audio Systems/Media/Pasted image 20261103011409.png",
-    "Audio Systems/Media/Pasted image 20261103011226.png",
-    "Audio Systems/Media/Pasted image 20261103011214.png",
-    "Audio Systems/Media/Pasted image 20261103000941.png",
-    "Audio & Video Codification Systems/Main Contents/Audio/4. Psychoacoustic Principles.md",
-    "Audio & Video Codification Systems/Main Contents/Audio/6. Neural Audio Compression.md",
-    "Audio & Video Codification Systems/Main Contents/Audio/1. Introduction to Audio Coding.md",
-    "Audio & Video Codification Systems/Subcontents/Hz to Bark Visualization.md",
-    "Audio & Video Codification Systems/Main Contents/Audio/2. Quantization and Entropy Coding.md",
-    "Audio & Video Codification Systems/Main Contents/Audio/3. Time Frequency Representations.md",
-    "Audio & Video Codification Systems/Main Contents/Audio/5. Audio Coding Standards.md",
-    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000 Media/T1 - JPEG and JPEG 2000-1793635870298.webp",
-    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000 Media/T1 - JPEG and JPEG 2000-1793635884080.webp",
-    "Audio & Video Codification Systems/Main Contents/Video/T1 - JPEG and JPEG 2000.md",
-    "Projects/Kahoot.md",
-    "Audio Systems/Media/Pasted Image 20261029193913_943.png",
-    "Audio Systems/Media/Pasted Image 20261029193857_815.png",
-    "Audio Systems/Media/Pasted Image 20261029190819_063.png",
-    "Audio & Video Codification Systems/Main Contents/4. Psychoacoustic Principles.md"
+    "Audio Systems/Main Contents/T1 - Sound & Acoustics.md",
+    "Audio Systems/Main Contents/T2 - Basic Electronics.md",
+    "Audio Systems/Main Contents/T3 - Sound and Capturing microphones.md",
+    "Excalidraw",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T2_BasicRayTracing.pdf",
+    "Advanced Computer Graphics (ACG)/Excalidraw Notes/RayTracing Basics.md",
+    "Advanced Computer Graphics (ACG)/Subcontents/Full transmitted ray proof.md",
+    "Advanced Computer Graphics (ACG)/Main Contents/T2 - Basic Raytracing.md",
+    "Advanced Computer Graphics (ACG)/Theory Contents/T1_Introduction.pdf"
   ]
 }

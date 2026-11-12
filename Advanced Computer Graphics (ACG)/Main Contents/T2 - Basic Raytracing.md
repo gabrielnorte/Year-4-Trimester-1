@@ -17,7 +17,9 @@ Remember that we often use more than 1 ray per frame buffer pixel
 
 Due to the parallel work this involves between pixel, the GPU might find this a bit expensive
 ![[T2 - Basic Raytracing-1791299645334.webp]]
-
+- **Ray tracing loop checks for intersection rather than if the pixel is covered or not**
+	- Ray tracing: Pixel based
+	- Rasterization: Object based
 ---
 # Raycasting
 ```ad-info
@@ -30,7 +32,7 @@ title: Basic ideas about rays / Assumptions
 ![[T2_BasicRayTracing.pdf#page=39&rect=40,216,747,381|T2_BasicRayTracing, p.39]]
 With the parametric form defined as 
 $$r(t) = o+td \quad 0\leq t < \infty$$
-	t indicates the current point in the ray
+	t indicates the current point in the ray, $d$ is the direction of the ray
 
 According to Apple on 1968, we send rays from the POV to the light source, and using intersections with objects we can define if the light reaches the camera or not.
 ![[T2_BasicRayTracing.pdf#page=41&rect=51,33,938,416|T2_BasicRayTracing, p.41]]
@@ -64,6 +66,12 @@ Diffuse material: Range of reflections
 
 Not sending enough rays can result in the pixel missing some color information
 
+```ad-summary
+**Ray casting**: Casting a single ray (Direct lightning)
+**Ray tracing**: From a single ray, creating creating others recursively (mirror and transmissive) until hitting diffuse material
+**Path tracing**: Creating different paths from multiple rays on a single pixel (Indirect lightning, /spp needed) until *max_depth*
+```
+
 ---
 # Rays intersection
 ## Ray scene intersection
@@ -78,6 +86,9 @@ With the parametric equations for both the plane and the ray, the *ray-plane int
 We write as $p = r(t)$ (point is a point in the ray)
 $$(p-p')·N = (o + td-p')·N = 0$$
 $$t = \frac{(p'-o)·N}{dN}$$
+```ad-danger
+Even if it cancels, the $N$ is required as it turns the vector into scalar value
+```
 ## Ray Triangle Intersection
 Since a triangle is always contained in a plane, we can just**:**
 **Step 1:** Compute the intersection of the ray with the plane containing the triangle
@@ -87,6 +98,13 @@ Since a triangle is always contained in a plane, we can just**:**
 Consider vertices $v_{1}, v_{2}, v_{3}$, to determine the plane we need $p'$ and $N$
 - $p'$: Can be any vertex
 - $N$: Cross product between triangle vectors
+```ad-info
+By the right hand rule
+- Index: First multiplying vector
+- Ring: Second multiplying vector
+- Normal: Facing outside (UP)
+```
+
 ![[T2_BasicRayTracing.pdf#page=68&rect=472,158,961,529|T2_BasicRayTracing, p.68]]
 
 ```ad-failure
@@ -94,18 +112,19 @@ title: Careful
 Normal should be facing upwards
 ```
 
-Then we check if the point lies in the triangle through:
-![[T2_BasicRayTracing.pdf#page=70&rect=50,150,887,371|T2_BasicRayTracing, p.70]]
+The thing is, **we have defined the plane on which the triangle lies**, but the intersection is still defined plane-wise.
+Therefore, to verify if the intersection point obtained is inside the triangle we perform *inside / outside test*
+![[T2 - Basic Raytracing-1794308886036.webp]]
 
 
+FOR ALL THESE CALCULATIONS, ASSUME THE RIGHT HAND RULE AXIS (y as middle finger, pointing down-left, index to the left, z up)
 
 ## Performance challenges
 Basic ray-scene intersection:
 - Test intersection with all the scene objects
 
 How costly is this?
-- nº intersection tests ≥ nº pixels ≈ 106 x nº triangles (?)
+- nº intersection tests ≥ nº pixels ≈ $10^6$ x nº triangles (?) (intersection checked for all triangles until reaching the **first** intersection)
 - How many triangles on a complex scene? - > 20 MILION
 
 Due to this, this an incredibility expensive computing intensive approach
-- 

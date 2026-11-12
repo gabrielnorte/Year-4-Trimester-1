@@ -1,0 +1,1 @@
+![[T6_RTE_VRE_AbsorptionOnly.pdf#page=22&rect=10,28,945,529|T6_RTE_VRE_AbsorptionOnly, p.22]]![[T6_RTE_VRE_AbsorptionOnly.pdf#page=23&rect=14,7,957,531|T6_RTE_VRE_AbsorptionOnly, p.23]]
