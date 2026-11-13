@@ -39,12 +39,13 @@ We will use this measure for directions
 # Radiance measures
 *Radiance is one a set of radiometric quantities used to describe the interaction of visible electromagnetic radiation with matter*
 
-| Radiometric Magnitude | Symbol | Units              |                                                                                     |
-| --------------------- | ------ | ------------------ | ----------------------------------------------------------------------------------- |
-| Flux                  | $\Phi$ | W (J/s)            | How many light traverses a surface in a given time                                  |
-| Irradiance            | E      | W/m^2              | Used for surface lights (either sources or receiving surfaces), depends on distance |
-| Radiant intensity     | $I$    | W/sr (steradiants) | Light actually emitted                                                              |
-| Radiance              | $L$    | $W / (m² s r)$     | The amount of light an an infinitessimal direction, depends on solid angle          |
+| Radiometric Magnitude | Symbol | Units              |                                                                                            |
+| --------------------- | ------ | ------------------ | ------------------------------------------------------------------------------------------ |
+| Flux                  | $\Phi$ | W (J/s)            | How much light traverses a surface in a given time<br>(total radiant energy per unit time) |
+| Irradiance            | E      | W/m^2              | Flux arriving at a surface per unit of area                                                |
+| Radiant intensity     | $I$    | W/sr (steradiants) | Light actually emitted<br>*Flux emitted by a point source per unit solid angle.*           |
+| Radiance              | $L$    | $W / (m² s r)$     | The amount of light an an infinitessimal direction, depends on solid angle                 |
+|                       |        |                    | *Flux per unit solid angle per unit projected area*                                        |
 ![[T4_REq_MC_Direct.pdf#page=17&rect=57,156,720,440|T4_REq_MC_Direct, p.17]]
 - 3D irradiance: Received light at a point $p$ based on many light sources
 - 3D radiance: Light coming from a differential solid angle

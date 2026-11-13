@@ -1107,11 +1107,11 @@
   "pdfSettings": {
     "pageSize": "A4",
     "pageOrientation": "portrait",
-    "fitToPage": 1,
+    "fitToPage": 4,
     "paperColor": "white",
     "customPaperColor": "#ffffff",
     "alignment": "center",
-    "margin": "normal"
+    "margin": "tiny"
   },
   "disableContextMenu": false
 }

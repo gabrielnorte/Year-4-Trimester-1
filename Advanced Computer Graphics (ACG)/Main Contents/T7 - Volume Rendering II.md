@@ -73,12 +73,13 @@ t_max = intersectVolumeBoundaries(r)
 pixelColor = 0
 tau = 0
 Deltat = ComputeStep()
-t = t_max - Delta/2
+t = t_max - Delta/2 
 
+//Starting from the end, back to front
 while t > 0
 	mu_a = getABsorption(t)
 	L_e = getEmission
-	pixelColor = mu_a*L_e * exp(-tau)*Delta
+	pixelColor += mu_a*L_e * exp(-tau)*Delta
 	tau += mu_a*Delta
 	t -= Delta
 
