@@ -14,8 +14,9 @@ Delta = computeStep()
 t = Delta/2 //We want so sample the center of the rectangle (matches with the real curve) - reduces error
 while t > t_max //Iteratively getting closer to the camera, t > t_max
 	mu_a = getAborption(t)
-	tau += mu_a x Delta
+	tau += mu_a x Delta 
 	t += Delta
+B·e^{-tau}
 ```
 
 # Emission-Absorption Model
@@ -80,7 +81,7 @@ while t > 0
 	mu_a = getABsorption(t)
 	L_e = getEmission
 	pixelColor += mu_a*L_e * exp(-tau)*Delta
-	tau += mu_a*Delta
+	tau += mu_a*Delta //tau can be updated before
 	t -= Delta
 
 pixelColor += Bexp(-tau)

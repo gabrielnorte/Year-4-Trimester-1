@@ -148,7 +148,7 @@ Depending on the room size and dimensions, reflections are prone to occur in man
 ---
 ```ad-summary
 ### dB clarification
-$${\color{\RED}dBV} = 20\log_{10}\left( \frac{V}{V_{0}} \right) = 20\log_{10}(V) \to \ŧext{(All in VRMS)}$$
+$${\color{\RED}dBV} = 20\log_{10}\left( \frac{V}{V_{0}} \right) = 20\log_{10}(V) \to \text{(All in VRMS)}$$
 $${\color{\LIGHTGREEN}dBu} = 20\log_{10}\left( \frac{V_{rms}}{V_{0}} \right) = 20\log_{10}\left( \frac{V_{rms}}{0.775 (rms)} \right)$$
 $$V_{rms} = 0.707·V$$
 $${\color{\SKYBLUE}dBW} = 10\log_{10}\left( \frac{W}{W_{0}} \right) = 10\log_{10}(W)$$
